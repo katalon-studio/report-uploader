@@ -28,4 +28,5 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v2
       with:
-        name: target/*.jar
+        name: katalon-report-uploader
+        path: target/*.jar
