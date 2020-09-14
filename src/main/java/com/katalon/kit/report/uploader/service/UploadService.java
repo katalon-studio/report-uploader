@@ -79,7 +79,7 @@ public class UploadService {
         files.addAll(zips);
         for (int i = 0; i < files.size(); i++) {
             Path filePath = files.get(i);
-            String folderPath = katalonStudioConnector.getFolderPath(filePath);
+            String folderPath = filePath.getParent().toString();
             boolean isEnd = i == (files.size() - 1);
 
             log.info("Sending file: {}", filePath.toAbsolutePath());
