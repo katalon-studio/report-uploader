@@ -25,6 +25,10 @@ import java.util.Map;
 @Component
 public class KatalonAnalyticsConnector {
 
+    private static final long MAX_WAIT_INTERVAL = 10000;
+
+    private static final long MAX_RETRIES = 10;
+
     private static final Logger log = LogHelper.getLogger();
 
     private static final String KATALON_TEST_REPORTS_URI = "/api/v1/katalon/test-reports";
@@ -134,7 +138,53 @@ public class KatalonAnalyticsConnector {
         }
     }
 
-    public void uploadFile(String url, File file) {
+    /*
+     * Returns the next wait interval, in milliseconds, using an exponential
+     * backoff algorithm.
+     */
+    public static long getWaitTimeExp(int retryCount) {
+        if (0 == retryCount) {
+            return 0;
+        }
+        long waitTime = ((long) Math.pow(2, retryCount) * 100L);
+        return waitTime;
+    }
+
+    public void uploadFileWithRetry(String url, File file) {
+        int retries = 0;
+        boolean retry = false;
+
+        do {
+            try {
+                // Get the result of the asynchronous operation.
+                int statusCode = uploadFile(url, file);
+
+                if (needToRetry(statusCode)) {
+                    retry = true;
+                    long waitTime = Math.min(getWaitTimeExp(retries), MAX_WAIT_INTERVAL);
+                    log.info("Wait {}ms until retry", waitTime);
+                    // Wait to retry
+                    Thread.sleep(waitTime);
+                }
+            } catch (IllegalArgumentException | InterruptedException e) {
+                System.out.println("Error sleeping thread: " + e.getMessage());
+            } catch (Exception e) {
+                System.out.println("Error: " + e.getMessage());
+            }
+        } while (retry && (retries++ < MAX_RETRIES));
+
+    }
+
+    private boolean needToRetry(int statusCode) {
+        // server error
+        return 500 <= statusCode && statusCode <= 599;
+    }
+
+    /*
+     * Return status code of upload file request.
+     * If failed to send request, return 0.
+     */
+    public int uploadFile(String url, File file) {
         try (InputStream content = new FileInputStream(file)) {
             HttpPut httpPut = new HttpPut(url);
             HttpResponse httpResponse = httpHelper.sendRequest(
@@ -145,10 +195,13 @@ public class KatalonAnalyticsConnector {
                     content,
                     file.length(),
                     null);
-            log.info(httpResponse.getStatusLine().getStatusCode() + " " + url);
+            int statusCode = httpResponse.getStatusLine().getStatusCode();
+            log.info(statusCode + " " + url);
+            return statusCode;
         } catch (Exception e) {
             log.error("Cannot send data to server: {}", url, e);
             exceptionHelper.wrap(e);
+            return 0;
         }
     }
 

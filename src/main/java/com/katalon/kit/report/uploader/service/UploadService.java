@@ -86,7 +86,7 @@ public class UploadService {
 
             File file = filePath.toFile();
             UploadInfo uploadInfo = katalonAnalyticsConnector.getUploadInfo(token, projectId);
-            katalonAnalyticsConnector.uploadFile(uploadInfo.getUploadUrl(), file);
+            katalonAnalyticsConnector.uploadFileWithRetry(uploadInfo.getUploadUrl(), file);
             katalonAnalyticsConnector.uploadFileInfo(
                     projectId, batch, folderPath, file.getName(), uploadInfo.getPath(), isEnd, token);
         }
