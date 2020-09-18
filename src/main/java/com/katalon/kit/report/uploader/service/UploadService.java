@@ -27,7 +27,7 @@ import static java.util.stream.Collectors.toList;
 public class UploadService {
     private static final Logger log = LogHelper.getLogger();
 
-    private static String LOG_PATTERN = ".*[^\\.har|.zip]$";
+    private static String LOG_PATTERN = ".*(?<!\\.zip|\\.har)$";
 
     private static String HAR_PATTERN = ".*\\.(har)$";
 
