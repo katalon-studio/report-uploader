@@ -28,12 +28,13 @@ Usage: https://docs.katalon.com/katalon-analytics/docs/project-management-import
 
 ## Example
 ```
-uses: actions/hello-world-docker-action@v1
-with:
-  api-key: ${{ secrets.TESTOPS_API_KEY}}
-  project-id: 50236
-  report-type: junit
-  report-path: ${{ github.workspace }}/junit-report-sample
+  - name: Katalon Report Uploader
+    uses: katalon-studio/report-uploader@v0.0.7.1
+    with:
+      api-key: ${{ secrets.TESTOPS_API_KEY}}
+      project-id: 50236
+      report-type: junit
+      report-path: ${{ github.workspace }}/junit-report-sample
 ```
 
 # Companion products
