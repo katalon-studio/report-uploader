@@ -1,5 +1,10 @@
 name: 'Katalon Report Uploader'
+author: Katalon LLC
 description: 'Katalon Report Uploader'
+branding:
+  icon: 'upload'
+  color: 'green'
+
 inputs:
   server-url:
     description: 'Server URL'
