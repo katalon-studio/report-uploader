@@ -26,14 +26,15 @@ Usage: https://docs.katalon.com/katalon-analytics/docs/project-management-import
 
 **Optional** The URL of Katalon TestOps. Default `https://analytics.katalon.com`.
 
-## Example usage
-
+## Example
+```
 uses: actions/hello-world-docker-action@v1
 with:
   api-key: ${{ secrets.TESTOPS_API_KEY}}
   project-id: 50236
   report-type: junit
   report-path: ${{ github.workspace }}/junit-report-sample
+```
 
 # Companion products
 
