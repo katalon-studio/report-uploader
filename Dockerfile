@@ -9,6 +9,6 @@ ENV TESTOPS_REPORT_PATH=''
 
 COPY target/katalon-report-uploader-*.jar /katalon-report-uploader.jar
 COPY entrypoint.sh /entrypoint.sh
-RUN chmod a+x /entrypoint.sh
+RUN chmod a+x /entrypoint.sh /katalon-report-uploader.jar
 
 ENTRYPOINT ["/entrypoint.sh"]
