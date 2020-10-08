@@ -12,4 +12,4 @@ if [ "$TESTOPS_EMAIL" != "" ]; then
     addition_args="${addition_args} --email=${TESTOPS_EMAIL}"
 fi
 
-java -jar katalon-report-uploader.jar --projectId=${TESTOPS_PROJECT_ID} --path="${TESTOPS_REPORT_PATH}" --password="${TESTOPS_PASSWORD}" --type="${TESTOPS_REPORT_TYPE}" ${addition_args}
+java -jar /katalon/katalon-report-uploader.jar --projectId=${TESTOPS_PROJECT_ID} --path="${TESTOPS_REPORT_PATH}" --password="${TESTOPS_PASSWORD}" --type="${TESTOPS_REPORT_TYPE}" ${addition_args}
