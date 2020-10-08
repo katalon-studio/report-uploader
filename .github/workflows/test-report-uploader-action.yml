@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.3.3
 
       - name: Upload report to TestOps
         uses: ./
         with:
-          api-key:
-          project-id:
+          api-key: ${{ secrets.TESTOPS_API_KEY}}
+          project-id: 50236
           report-type: junit
-          report-path: ./target/surefire-reports
+          report-path: ${{ github.workspace }}/junit-report-sample
