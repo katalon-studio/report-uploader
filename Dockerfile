@@ -13,9 +13,6 @@ RUN mkdir -p $KATALON_ROOT_DIR
 WORKDIR $KATALON_ROOT_DIR
 COPY target/katalon-report-uploader-*.jar katalon-report-uploader.jar
 
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod a+x /entrypoint.sh /katalon-report-uploader.jar
-
 WORKDIR /
 COPY ./entrypoint.sh /usr/local/bin/entrypoint.sh
 RUN chmod a+x /usr/local/bin/entrypoint.sh
