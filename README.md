@@ -16,7 +16,7 @@ Usage: https://docs.katalon.com/katalon-analytics/docs/project-management-import
 
 ### `report-type`
 
-**Required** One of the values including "katalon", "JUnit", or "katalon_recorder". 
+**Required** One of the values including "katalon", "junit", or "katalon_recorder". 
 
 ### `report-path`
 
