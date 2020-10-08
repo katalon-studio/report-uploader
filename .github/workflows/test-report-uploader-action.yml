@@ -3,7 +3,7 @@ name: Test Report Uploader Action
 on:
   push:
     branches:
-      - build-image
+      - master
 
 jobs:
   build:
