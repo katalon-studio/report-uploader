@@ -1,0 +1,21 @@
+name: Test Report Uploader Action
+
+on:
+  push:
+    branches:
+      - build-image
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Upload report to TestOps
+        uses: ./
+        with:
+          api-key:
+          project-id:
+          report-type: junit
+          report-path: ./target/surefire-reports
