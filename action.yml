@@ -1,0 +1,28 @@
+name: 'Katalon Report Uploader'
+description: 'Katalon Report Uploader'
+inputs:
+  server-url:
+    description: 'Server URL'
+    required: false
+  api-key:
+    description: 'API key'
+    required: true
+  project-id:
+    description: 'Project id'
+    required: true
+  report-type:
+    description: 'Report type'
+    required: true
+  report-path:
+    description: 'Report path'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  env:
+    TESTOPS_SERVER_URL: ${{ inputs.server-url }
+    TESTOPS_PASSWORD: ${{ inputs.api-key }}
+    TESTOPS_PROJECT_ID: ${{ inputs.project-id }}
+    TESTOPS_REPORT_TYPE: ${{ inputs.report-type }}
+    TESTOPS_REPORT_PATH: ${{ inputs.report-path }}
