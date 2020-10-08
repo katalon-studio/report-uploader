@@ -24,9 +24,9 @@ inputs:
 
 runs:
   using: 'docker'
-  image: 'Dockerfile'
+  image: 'katalonstudio/report-uploader:latest'
   env:
-    TESTOPS_SERVER_URL: ${{ inputs.server-url }
+    TESTOPS_SERVER_URL: ${{ inputs.server-url }}
     TESTOPS_PASSWORD: ${{ inputs.api-key }}
     TESTOPS_PROJECT_ID: ${{ inputs.project-id }}
     TESTOPS_REPORT_TYPE: ${{ inputs.report-type }}
