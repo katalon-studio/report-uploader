@@ -32,7 +32,7 @@ jobs:
           TESTOPS_REPORT_TYPE: junit
           TESTOPS_REPORT_PATH: ${{ github.workspace }}/junit-report-sample
           
-      - name: Upload report to TestOps
+      - name: Katalon Report Uploader
         uses: katalon-studio/report-uploader@v0.0.7.1
         with:
           api-key: ${{ secrets.TESTOPS_API_KEY }}
