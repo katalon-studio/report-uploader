@@ -19,7 +19,7 @@ jobs:
         uses: ./
         with:
           api-key: ${{ secrets.TESTOPS_API_KEY }}
-          project-id: 50236
+          project-id: 6600
           report-type: junit
           report-path: ${{ github.workspace }}/junit-report-sample
 
@@ -28,7 +28,7 @@ jobs:
         env:
           TESTOPS_EMAIL: ${{ secrets.TESTOPS_EMAIL }}
           TESTOPS_PASSWORD: ${{ secrets.TESTOPS_PASSWORD }}
-          TESTOPS_PROJECT_ID: 50236
+          TESTOPS_PROJECT_ID: 6600
           TESTOPS_REPORT_TYPE: junit
           TESTOPS_REPORT_PATH: ${{ github.workspace }}/junit-report-sample
 
