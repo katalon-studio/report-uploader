@@ -166,10 +166,8 @@ public class KatalonAnalyticsConnector {
                     // Wait to retry
                     Thread.sleep(waitTime);
                 }
-            } catch (IllegalArgumentException | InterruptedException e) {
-                System.out.println("Error sleeping thread: " + e.getMessage());
             } catch (Exception e) {
-                System.out.println("Error: " + e.getMessage());
+                log.error("Error when uploading files", e);
             }
         } while (retry && (retries++ < MAX_RETRIES));
 
@@ -200,8 +198,7 @@ public class KatalonAnalyticsConnector {
             return statusCode;
         } catch (Exception e) {
             log.error("Cannot send data to server: {}", url, e);
-            exceptionHelper.wrap(e);
-            return 0;
+            return exceptionHelper.wrap(e);
         }
     }
 

@@ -101,7 +101,7 @@ The path of the report folder.
 
 ```yaml
   - name: Katalon Report Uploader
-    uses: katalon-studio/report-uploader@v0.0.7.1
+    uses: katalon-studio/report-uploader@v0.0.7.10
     with:
       api-key: ${{ secrets.TESTOPS_API_KEY }}
       project-id: 50236
@@ -113,7 +113,7 @@ or
 
 ```yaml
   - name: Katalon Report Uploader
-    uses: katalon-studio/report-uploader@v0.0.7.1
+    uses: katalon-studio/report-uploader@v0.0.7.10
     env:
       TESTOPS_EMAIL: ${{ secrets.TESTOPS_EMAIL }}
       TESTOPS_PASSWORD: ${{ secrets.TESTOPS_PASSWORD }}

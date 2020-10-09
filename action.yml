@@ -7,4 +7,4 @@ branding:
 
 runs:
   using: 'docker'
-  image: 'docker://katalonstudio/report-uploader:0.0.7.6'
+  image: 'docker://katalonstudio/report-uploader:0.0.7.9'
