@@ -26,7 +26,7 @@ Usage: https://docs.katalon.com/katalon-analytics/docs/project-management-import
 
 **Optional** The URL of Katalon TestOps. Default `https://analytics.katalon.com`.
 
-## Environment
+## Environments
 
 ### `TESTOPS_SERVER_URL`
 The URL of Katalon TestOps. Default `https://analytics.katalon.com`
