@@ -11,3 +11,7 @@ if [ "$TESTOPS_EMAIL" != "" ]; then
 fi
 
 java -jar /katalon/katalon-report-uploader.jar --projectId=${TESTOPS_PROJECT_ID} --path="${TESTOPS_REPORT_PATH}" --password="${TESTOPS_PASSWORD}" --type="${TESTOPS_REPORT_TYPE}" ${addition_args}
+
+ret_code=$?
+
+exit $ret_code
