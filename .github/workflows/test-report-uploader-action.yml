@@ -26,8 +26,7 @@ jobs:
       - name: Upload report to TestOps
         uses: ./
         env:
-          TESTOPS_EMAIL: ${{ secrets.TESTOPS_EMAIL }}
-          TESTOPS_PASSWORD: ${{ secrets.TESTOPS_PASSWORD }}
+          TESTOPS_PASSWORD: ${{ secrets.TESTOPS_API_KEY }}
           TESTOPS_PROJECT_ID: 6600
           TESTOPS_REPORT_TYPE: junit
           TESTOPS_REPORT_PATH: ${{ github.workspace }}/junit-report-sample
