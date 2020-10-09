@@ -10,15 +10,18 @@ RUN mvn -B -s /usr/share/maven/ref/settings-docker.xml package -DskipTests
 
 FROM openjdk:8-jre-alpine
 
-ENV TESTOPS_SERVER_URL=''
-ENV TESTOPS_EMAIL=''
-ENV TESTOPS_PASSWORD=''
-ENV TESTOPS_PROJECT_ID=''
-ENV TESTOPS_REPORT_TYPE=''
-ENV TESTOPS_REPORT_PATH=''
+ENV TESTOPS_SERVER=''
+ENV KATALON_EMAIL=''
+ENV KATALON_PASSWORD=''
+ENV PROJECT_ID=''
+ENV REPORT_TYPE=''
+ENV REPORT_PATH=''
 
 WORKDIR /katalon
 COPY --from=build /katalon/target/katalon-report-uploader-*.jar katalon-report-uploader.jar
+COPY uploader.sh uploader.sh
+RUN chmod a+x uploader.sh
+ENV PATH "$PATH:/katalon"
 
 WORKDIR /
 COPY ./entrypoint.sh /usr/local/bin/entrypoint.sh

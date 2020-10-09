@@ -1,17 +1,9 @@
-#!/bin/sh -l
+#!/bin/sh
 
-addition_args=""
+set -e
 
-if [ "$TESTOPS_SERVER_URL" != "" ]; then
-    addition_args="${addition_args} --server=${TESTOPS_SERVER_URL}"
+if [ -z "$@"]; then
+  uploader.sh
+else
+  exec "$@"
 fi
-
-if [ "$TESTOPS_EMAIL" != "" ]; then
-    addition_args="${addition_args} --email=${TESTOPS_EMAIL}"
-fi
-
-java -jar /katalon/katalon-report-uploader.jar --projectId=${TESTOPS_PROJECT_ID} --path="${TESTOPS_REPORT_PATH}" --password="${TESTOPS_PASSWORD}" --type="${TESTOPS_REPORT_TYPE}" ${addition_args}
-
-ret_code=$?
-
-exit $ret_code
