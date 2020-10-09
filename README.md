@@ -52,7 +52,7 @@ The path of report folder.
   - name: Katalon Report Uploader
     uses: katalon-studio/report-uploader@v0.0.7.1
     with:
-      api-key: ${{ secrets.TESTOPS_API_KEY}}
+      api-key: ${{ secrets.TESTOPS_API_KEY }}
       project-id: 50236
       report-type: junit
       report-path: ${{ github.workspace }}/junit-report-sample
@@ -64,8 +64,8 @@ or
   - name: Katalon Report Uploader
     uses: katalon-studio/report-uploader@v0.0.7.1
     env:
-      TESTOPS_EMAIL: quile@kms-technology.com
-      TESTOPS_PASSWORD: 12345678
+      TESTOPS_EMAIL: ${{ secrets.TESTOPS_EMAIL }}
+      TESTOPS_PASSWORD: ${{ secrets.TESTOPS_PASSWORD }}
       TESTOPS_PROJECT_ID: 50236
       TESTOPS_REPORT_TYPE: junit
       TESTOPS_REPORT_PATH: ${{ github.workspace }}/junit-report-sample
