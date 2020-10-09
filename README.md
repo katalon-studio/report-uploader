@@ -8,7 +8,7 @@ Usage: https://docs.katalon.com/katalon-analytics/docs/project-management-import
 
 ### `api-key`
 
-**Required** The API key in Katalon TestOps
+**Required** The API key in Katalon TestOps.
 
 ### `project-id`
 
@@ -29,7 +29,7 @@ Usage: https://docs.katalon.com/katalon-analytics/docs/project-management-import
 ## Environments
 
 ### `TESTOPS_SERVER_URL`
-The URL of Katalon TestOps. Default `https://analytics.katalon.com`
+The URL of Katalon TestOps. Default `https://analytics.katalon.com`.
 
 ### `TESTOPS_EMAIL`
 The email registered for your Katalon account.
