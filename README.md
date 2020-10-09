@@ -1,54 +1,78 @@
-# report-uploader
+# Katalon Report Uploader
 
-Usage: https://docs.katalon.com/katalon-analytics/docs/project-management-import-cli.html.
+Katalon Report Uploader is a utility to upload reports to Katalon TestOps. At this moment it supports JUnit, Katalon Studio, and Katalon Recorder report format. It can be used as an CLI, Docker image, and Github Action.
 
-# [GITHUB ACTION] report-uploader
+## Companion products
 
-## Inputs
+### Katalon TestOps
 
-### `api-key`
+[Katalon TestOps](https://analytics.katalon.com) is a web-based application that provides dynamic perspectives and an insightful look at your automation testing data. You can leverage your automation testing data by transforming and visualizing your data; analyzing test results; seamlessly integrating with such tools as Katalon Studio and Jira; maximizing the testing capacity with remote execution.
 
-**Required** The API key in Katalon TestOps.
+* Read our [documentation](https://docs.katalon.com/katalon-analytics/docs/overview.html).
+* Ask a question on [Forum](https://forum.katalon.com/categories/katalon-analytics).
+* Request a new feature on [GitHub](CONTRIBUTING.md).
+* Vote for [Popular Feature Requests](https://github.com/katalon-analytics/katalon-analytics/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc).
+* File a bug in [GitHub Issues](https://github.com/katalon-analytics/katalon-analytics/issues).
 
-### `project-id`
+### Katalon Studio
+[Katalon Studio](https://www.katalon.com) is a free and complete automation testing solution for Web, Mobile, and API testing with modern methodologies (Data-Driven Testing, TDD/BDD, Page Object Model, etc.) as well as advanced integration (JIRA, qTest, Slack, CI, Katalon TestOps, etc.). Learn more about [Katalon Studio features](https://www.katalon.com/features/).
+
+## Use as CLI
+
+Please see [Katalon TestOps documentation](https://docs.katalon.com/katalon-analytics/docs/project-management-import-cli.html).
+
+## Use as Github Action
+
+Marketplace Listing: https://github.com/marketplace/actions/katalon-report-uploader.
+
+### Inputs
+
+`api-key`
+
+**Required** Your API key in Katalon TestOps.
+
+`project-id`
 
 **Required** Your project ID in Katalon TestOps.
 
-### `report-type`
+`report-type`
 
 **Required** One of the values including "katalon", "junit", or "katalon_recorder". 
 
-### `report-path`
+`report-path`
 
-**Required** The path of report folder.
+**Required** The path of the report folder.
 
-### `server-url`
+`server-url`
 
 **Optional** The URL of Katalon TestOps. Default `https://analytics.katalon.com`.
 
-## Environments
+### Environments
 
-### `TESTOPS_SERVER_URL`
+Inputs can also be provided as environment variables.
+
+`TESTOPS_SERVER_URL`
 The URL of Katalon TestOps. Default `https://analytics.katalon.com`.
 
-### `TESTOPS_EMAIL`
+`TESTOPS_EMAIL`
 The email registered for your Katalon account.
 
-### `TESTOPS_PASSWORD`
+`TESTOPS_PASSWORD`
 The password used for signing in Katalon TestOps or an API Key.
 
-### `TESTOPS_PROJECT_ID`
+`TESTOPS_PROJECT_ID`
 Your project ID in Katalon TestOps.
 
-### `TESTOPS_REPORT_TYPE`
+`TESTOPS_REPORT_TYPE`
 One of the values including "katalon", "junit", or "katalon_recorder".
 
-### `TESTOPS_REPORT_PATH`
+`TESTOPS_REPORT_PATH`
 The path of report folder.
 
 
-## Example
-```
+### Examples
+
+```yaml
   - name: Katalon Report Uploader
     uses: katalon-studio/report-uploader@v0.0.7.1
     with:
@@ -60,7 +84,7 @@ The path of report folder.
 
 or
 
-```
+```yaml
   - name: Katalon Report Uploader
     uses: katalon-studio/report-uploader@v0.0.7.1
     env:
@@ -70,18 +94,3 @@ or
       TESTOPS_REPORT_TYPE: junit
       TESTOPS_REPORT_PATH: ${{ github.workspace }}/junit-report-sample
 ```
-
-# Companion products
-
-##Katalon TestOps
-
-[Katalon TestOps](https://analytics.katalon.com) is a web-based application that provides dynamic perspectives and an insightful look at your automation testing data. You can leverage your automation testing data by transforming and visualizing your data; analyzing test results; seamlessly integrating with such tools as Katalon Studio and Jira; maximizing the testing capacity with remote execution.
-
-* Read our [documentation](https://docs.katalon.com/katalon-analytics/docs/overview.html).
-* Ask a question on [Forum](https://forum.katalon.com/categories/katalon-analytics).
-* Request a new feature on [GitHub](CONTRIBUTING.md).
-* Vote for [Popular Feature Requests](https://github.com/katalon-analytics/katalon-analytics/issues?q=is%3Aopen+is%3Aissue+label%3Afeature-request+sort%3Areactions-%2B1-desc).
-* File a bug in [GitHub Issues](https://github.com/katalon-analytics/katalon-analytics/issues).
-
-## Katalon Studio
-[Katalon Studio](https://www.katalon.com) is a free and complete automation testing solution for Web, Mobile, and API testing with modern methodologies (Data-Driven Testing, TDD/BDD, Page Object Model, etc.) as well as advanced integration (JIRA, qTest, Slack, CI, Katalon TestOps, etc.). Learn more about [Katalon Studio features](https://www.katalon.com/features/).
