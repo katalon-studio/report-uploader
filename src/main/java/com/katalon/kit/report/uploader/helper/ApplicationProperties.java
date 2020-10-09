@@ -42,6 +42,12 @@ public class ApplicationProperties {
     @Value("${projectId}")
     private Long projectId;
 
+    @Value("${report-path}")
+    private String reportPath;
+
+    @Value("${project-id}")
+    private Long testopsProjectId;
+
     public String getServerApiOAuth2ClientId() {
         return serverApiOAuth2ClientId;
     }
@@ -79,10 +85,10 @@ public class ApplicationProperties {
     }
 
     public String getPath() {
-        return path;
+        return StringUtils.isBlank(reportPath) ? path : reportPath;
     }
 
     public Long getProjectId() {
-        return projectId;
+        return testopsProjectId == null ? projectId : testopsProjectId;
     }
 }
