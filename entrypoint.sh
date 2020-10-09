@@ -1,7 +1,5 @@
 #!/bin/sh -l
 
-set -ex
-
 addition_args=""
 
 if [ "$TESTOPS_SERVER_URL" != "" ]; then
