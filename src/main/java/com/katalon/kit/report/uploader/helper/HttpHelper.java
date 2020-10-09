@@ -121,10 +121,11 @@ public class HttpHelper {
             KeyStore keyStore = KeyStore.getInstance(KeyStore.getDefaultType());
             TrustStrategy trustStrategy = new TrustAllStrategy();
             sslContextBuilder.loadTrustMaterial(keyStore, trustStrategy);
-            sslContextBuilder.useProtocol("TLSv1.2");
+            sslContextBuilder.useProtocol("TLSv1.3");
             SSLContext sslContext = sslContextBuilder.build();
             return sslContext;
         } catch (Exception e) {
+            log.error("Cannot get SSL context", e);
             return exceptionHelper.wrap(e);
         }
     }

@@ -119,6 +119,7 @@ public class UploadService {
             }
         } catch (Exception ex) {
             log.error("Cannot zip hars file", ex);
+
         }
         return zips;
     }
