@@ -12,7 +12,7 @@ Usage: https://docs.katalon.com/katalon-analytics/docs/project-management-import
 
 ### `project-id`
 
-**Required** The project ID in Katalon TestOps.
+**Required** Your project ID in Katalon TestOps.
 
 ### `report-type`
 
@@ -26,6 +26,27 @@ Usage: https://docs.katalon.com/katalon-analytics/docs/project-management-import
 
 **Optional** The URL of Katalon TestOps. Default `https://analytics.katalon.com`.
 
+## Environment
+
+### `TESTOPS_SERVER_URL`
+The URL of Katalon TestOps. Default `https://analytics.katalon.com`
+
+### `TESTOPS_EMAIL`
+The email registered for your Katalon account.
+
+### `TESTOPS_PASSWORD`
+The password used for signing in Katalon TestOps or an API Key.
+
+### `TESTOPS_PROJECT_ID`
+Your project ID in Katalon TestOps.
+
+### `TESTOPS_REPORT_TYPE`
+One of the values including "katalon", "junit", or "katalon_recorder".
+
+### `TESTOPS_REPORT_PATH`
+The path of report folder.
+
+
 ## Example
 ```
   - name: Katalon Report Uploader
@@ -35,6 +56,19 @@ Usage: https://docs.katalon.com/katalon-analytics/docs/project-management-import
       project-id: 50236
       report-type: junit
       report-path: ${{ github.workspace }}/junit-report-sample
+```
+
+or
+
+```
+  - name: Katalon Report Uploader
+    uses: katalon-studio/report-uploader@v0.0.7.1
+    env:
+      TESTOPS_EMAIL: quile@kms-technology.com
+      TESTOPS_PASSWORD: 12345678
+      TESTOPS_PROJECT_ID: 50236
+      TESTOPS_REPORT_TYPE: junit
+      TESTOPS_REPORT_PATH: ${{ github.workspace }}/junit-report-sample
 ```
 
 # Companion products
