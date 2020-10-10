@@ -27,74 +27,52 @@ Please see [Katalon TestOps documentation](https://docs.katalon.com/katalon-anal
 
 ### Environment variables
 
-`TESTOPS_SERVER_URL`
+`SERVER`
 The URL of Katalon TestOps. Default `https://analytics.katalon.com`.
 
-`TESTOPS_EMAIL`
+`EMAIL`
 The email registered for your Katalon account.
 
-`TESTOPS_PASSWORD`
+`PASSWORD`
 The password used for signing in Katalon TestOps or an API Key.
 
-`TESTOPS_PROJECT_ID`
+`PROJECT_ID`
 Your project ID in Katalon TestOps.
 
-`TESTOPS_REPORT_TYPE`
+`TYPE`
 One of the values including "katalon", "junit", or "katalon_recorder".
 
-`TESTOPS_REPORT_PATH`
+`REPORT_PATH`
 The path of the report folder. The physical report folder should be mounted as a Docker volume first.
 
 ```
-docker run -t --rm -v c:\users\alex\data\report-uploader\junit-report-sample:/katalon/report -e TESTOPS_PASSWORD=<API_KEY> -e TESTOPS_PROJECT_ID=72642 -e TESTOPS_REPORT_TYPE=junit -e TESTOPS_REPORT_PATH=/katalon/report katalonstudio/report-uploader:0.0.7.5
+docker run -t --rm -v c:\users\alex\data\report-uploader\junit-report-sample:/katalon/report -e PASSWORD=<KATALON_API_KEY> -e PROJECT_ID=72642 -e TYPE=junit -e REPORT_PATH=/katalon/report katalonstudio/report-uploader:0.0.7.11
 ```
 
 ## Github Action usage
 
 Marketplace Listing: https://github.com/marketplace/actions/katalon-report-uploader.
 
-### Inputs
-
-`api-key`
-
-**Required** Your API key in Katalon TestOps.
-
-`project-id`
-
-**Required** Your project ID in Katalon TestOps.
-
-`report-type`
-
-**Required** One of the values including "katalon", "junit", or "katalon_recorder". 
-
-`report-path`
-
-**Required** The path of the report folder.
-
-`server-url`
-
-**Optional** The URL of Katalon TestOps. Default `https://analytics.katalon.com`.
-
 ### Environment variables
 
 Inputs can also be provided as environment variables.
 
-`TESTOPS_SERVER_URL`
+`SERVER`
 The URL of Katalon TestOps. Default `https://analytics.katalon.com`.
 
-`TESTOPS_EMAIL`
+`EMAIL`
 The email registered for your Katalon account. Not required if API Key is used instead of password.
 
-`TESTOPS_PASSWORD`
+`PASSWORD`
 The password used for signing in Katalon TestOps or an API Key.
 
-`TESTOPS_PROJECT_ID`
+`PROJECT_ID`
 Your project ID in Katalon TestOps.
 
-`TESTOPS_REPORT_TYPE`
+`TYPE`
 One of the values including "katalon", "junit", or "katalon_recorder".
 
-`TESTOPS_REPORT_PATH`
+`REPORT_PATH`
 The path of the report folder.
 
 ### Examples
@@ -102,22 +80,9 @@ The path of the report folder.
 ```yaml
   - name: Katalon Report Uploader
     uses: katalon-studio/report-uploader@v0.0.7.11
-    with:
-      api-key: ${{ secrets.TESTOPS_API_KEY }}
-      project-id: 50236
-      report-type: junit
-      report-path: ${{ github.workspace }}/junit-report-sample
-```
-
-or
-
-```yaml
-  - name: Katalon Report Uploader
-    uses: katalon-studio/report-uploader@v0.0.7.11
     env:
-      TESTOPS_EMAIL: ${{ secrets.TESTOPS_EMAIL }}
-      TESTOPS_PASSWORD: ${{ secrets.TESTOPS_PASSWORD }}
-      TESTOPS_PROJECT_ID: 50236
-      TESTOPS_REPORT_TYPE: junit
-      TESTOPS_REPORT_PATH: ${{ github.workspace }}/junit-report-sample
+      PASSWORD: ${{ secrets.KATALON_API_KEY }}
+      PROJECT_ID: 50236
+      TYPE: junit
+      REPORT_PATH: ${{ github.workspace }}/junit-report-sample
 ```

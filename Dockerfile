@@ -10,11 +10,11 @@ RUN mvn -B -s /usr/share/maven/ref/settings-docker.xml package -DskipTests
 
 FROM openjdk:8-jre-alpine
 
-ENV TESTOPS_SERVER=''
-ENV KATALON_EMAIL=''
-ENV KATALON_PASSWORD=''
+ENV SERVER=''
+ENV EMAIL=''
+ENV PASSWORD=''
 ENV PROJECT_ID=''
-ENV REPORT_TYPE=''
+ENV TYPE=''
 ENV REPORT_PATH=''
 
 WORKDIR /katalon
