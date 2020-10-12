@@ -23,8 +23,6 @@ Please see [Katalon TestOps documentation](https://docs.katalon.com/katalon-anal
 
 ## Docker usage
 
-### Examples
-
 ### Environment variables
 
 `SERVER`
@@ -44,6 +42,8 @@ One of the values including "katalon", "junit", or "katalon_recorder".
 
 `REPORT_PATH`
 The path of the report folder. The physical report folder should be mounted as a Docker volume first.
+
+### Examples
 
 ```
 docker run -t --rm -v c:\users\alex\data\report-uploader\junit-report-sample:/katalon/report -e PASSWORD=<KATALON_API_KEY> -e PROJECT_ID=72642 -e TYPE=junit -e REPORT_PATH=/katalon/report katalonstudio/report-uploader:0.0.7.11
