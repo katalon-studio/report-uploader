@@ -125,6 +125,7 @@ public class HttpHelper {
             SSLContext sslContext = sslContextBuilder.build();
             return sslContext;
         } catch (Exception e) {
+            log.error("Cannot get SSL context", e);
             return exceptionHelper.wrap(e);
         }
     }

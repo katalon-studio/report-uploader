@@ -49,6 +49,7 @@ public class FileHelper {
             });
             return filePaths;
         } catch (Exception e) {
+            log.error("Exception when scanning files", e);
             return exceptionHelper.wrap(e);
         }
     }

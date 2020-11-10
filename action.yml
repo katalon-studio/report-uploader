@@ -1,0 +1,10 @@
+name: 'Katalon Report Uploader'
+author: Katalon LLC
+description: 'Katalon Report Uploader'
+branding:
+  icon: 'upload'
+  color: 'blue'
+
+runs:
+  using: 'docker'
+  image: 'docker://katalonstudio/report-uploader:0.0.7.11'

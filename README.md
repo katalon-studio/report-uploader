@@ -1,6 +1,6 @@
-# report-uploader
+# Katalon Report Uploader
 
-Usage: https://docs.katalon.com/katalon-analytics/docs/project-management-import-cli.html.
+Katalon Report Uploader is a utility to upload reports to Katalon TestOps. At this moment it supports JUnit, Katalon Studio, and Katalon Recorder report format. It can be used with CLI, Docker, and Github Action.
 
 ## Companion products
 
@@ -16,3 +16,7 @@ Usage: https://docs.katalon.com/katalon-analytics/docs/project-management-import
 
 ### Katalon Studio
 [Katalon Studio](https://www.katalon.com) is a free and complete automation testing solution for Web, Mobile, and API testing with modern methodologies (Data-Driven Testing, TDD/BDD, Page Object Model, etc.) as well as advanced integration (JIRA, qTest, Slack, CI, Katalon TestOps, etc.). Learn more about [Katalon Studio features](https://www.katalon.com/features/).
+
+## Usage
+
+Please see [Katalon TestOps documentation](https://docs.katalon.com/katalon-analytics/docs/project-management-import-cli.html).
