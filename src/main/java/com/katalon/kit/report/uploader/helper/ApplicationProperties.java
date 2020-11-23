@@ -48,6 +48,9 @@ public class ApplicationProperties {
     @Value("${project-id}")
     private Long testopsProjectId;
 
+    @Value("${buildLabel}")
+    private String buildLabel;
+
     public String getServerApiOAuth2ClientId() {
         return serverApiOAuth2ClientId;
     }
@@ -91,4 +94,9 @@ public class ApplicationProperties {
     public Long getProjectId() {
         return testopsProjectId == null ? projectId : testopsProjectId;
     }
+
+    public String getBuildLabel() {
+        return buildLabel;
+    }
+
 }

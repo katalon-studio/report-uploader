@@ -1,5 +1,6 @@
 package com.katalon.kit.report.uploader.service;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.katalon.kit.report.uploader.helper.*;
 import com.katalon.kit.report.uploader.model.UploadInfo;
 import org.apache.commons.io.IOUtils;
@@ -54,6 +55,8 @@ public class UploadService {
 
     private String uploadInfoFilePath;
 
+    private Map<String, String> optionalData;
+
     @PostConstruct
     private void postConstruct() {
         path = applicationProperties.getPath();
@@ -66,9 +69,27 @@ public class UploadService {
     public void upload() {
         String token = katalonAnalyticsConnector.requestToken(email, password);
         if (StringUtils.isNotBlank(token)) {
+            collectOptionalData();
+            generateOptionalDataFile();
             perform(token);
         } else {
             log.error("Cannot get the access token - please check your credentials and network");
+        }
+    }
+
+    private void collectOptionalData() {
+        if (optionalData == null) {
+            optionalData = new HashMap<>();
+        }
+        optionalData.put("buildLabel", applicationProperties.getBuildLabel());
+    }
+
+    private void generateOptionalDataFile() {
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            mapper.writeValue(Paths.get(path, "execution.override_properties").toFile(), optionalData);
+        } catch (IOException e) {
+            log.error("Failed to handle some parameters.");
         }
     }
 
