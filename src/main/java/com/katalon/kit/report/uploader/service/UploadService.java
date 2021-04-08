@@ -17,7 +17,13 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
@@ -28,9 +34,9 @@ public class UploadService {
     private static final Logger log = LogHelper.getLogger();
 
     // matches all files not end with ".", ".zip", ".har"
-    private static String LOG_PATTERN = ".*(?i)(?<!\\.|\\.zip|\\.har)$";
+    private static final String LOG_PATTERN = ".*(?i)(?<!\\.|\\.zip|\\.har)$";
 
-    private static String HAR_PATTERN = ".*(?i)\\.(har)$";
+    private static final String HAR_PATTERN = ".*(?i)\\.(har)$";
 
     @Autowired
     private FileHelper fileHelper;
@@ -78,18 +84,32 @@ public class UploadService {
         List<Path> files = fileHelper.scanFiles(path, LOG_PATTERN);
         String batch = System.currentTimeMillis() + "-" + UUID.randomUUID().toString();
         files.addAll(zips);
-        for (int i = 0; i < files.size(); i++) {
-            Path filePath = files.get(i);
-            String folderPath = filePath.getParent().toString();
-            boolean isEnd = i == (files.size() - 1);
 
-            log.info("Sending file: {}", filePath.toAbsolutePath());
+        List<UploadInfo> infos = katalonAnalyticsConnector.getUploadInfos(token, projectId, files.size());
+        ExecutorService executor = Executors.newFixedThreadPool(32);
+        AtomicInteger count = new AtomicInteger(0);
 
-            File file = filePath.toFile();
-            UploadInfo uploadInfo = katalonAnalyticsConnector.getUploadInfo(token, projectId);
-            katalonAnalyticsConnector.uploadFileWithRetry(uploadInfo.getUploadUrl(), file);
-            katalonAnalyticsConnector.uploadFileInfo(
-                    projectId, batch, folderPath, file.getName(), uploadInfo.getPath(), isEnd, token);
+        List<CompletableFuture<Integer>> futures = IntStream.range(0, files.size())
+                .mapToObj(i -> CompletableFuture.supplyAsync(() -> {
+                    Path filePath = files.get(i);
+                    UploadInfo uploadInfo = infos.get(i);
+                    boolean isEnd = i == (files.size() - 1);
+
+                    int currentCount = count.getAndIncrement();
+                    log.info("Sending file: {} ({}/{}).", filePath.toAbsolutePath(), currentCount, files.size());
+                    uploadFile(filePath, uploadInfo, batch, isEnd, token);
+                    log.debug("Sent file: {} ({}/{}).", filePath.toAbsolutePath(), currentCount, files.size());
+                    return i;
+                }, executor))
+                .collect(toList());
+
+
+        CompletableFuture<Void> allFutures = CompletableFuture.allOf(futures.toArray(new CompletableFuture[files.size()]));
+        try {
+            allFutures.get();
+        } catch (InterruptedException | ExecutionException e) {
+            log.error("Cannot upload files", e);
+            Thread.currentThread().interrupt();
         }
 
         try {
@@ -97,6 +117,14 @@ public class UploadService {
         } catch (Exception e) {
             log.error("Cannot write file", e);
         }
+    }
+
+    private void uploadFile(Path filePath, UploadInfo uploadInfo, String batch, boolean isEnd, String token) {
+        String folderPath = filePath.getParent().toString();
+        File file = filePath.toFile();
+        katalonAnalyticsConnector.uploadFileWithRetry(uploadInfo.getUploadUrl(), file);
+        katalonAnalyticsConnector.uploadFileInfo(
+                projectId, batch, folderPath, file.getName(), uploadInfo.getPath(), isEnd, token);
     }
 
     private List<Path> packageHarFiles(String path) {
