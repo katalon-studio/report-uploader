@@ -22,6 +22,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.function.IntFunction;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.zip.ZipEntry;
@@ -88,23 +89,28 @@ public class UploadService {
         List<UploadInfo> infos = katalonAnalyticsConnector.getUploadInfos(token, projectId, files.size());
         ExecutorService executor = Executors.newFixedThreadPool(32);
         AtomicInteger count = new AtomicInteger(0);
+        final int lastFileIndex = files.size() - 1;
 
-        List<CompletableFuture<Integer>> futures = IntStream.range(0, files.size())
-                .mapToObj(i -> CompletableFuture.supplyAsync(() -> {
-                    Path filePath = files.get(i);
-                    UploadInfo uploadInfo = infos.get(i);
-                    boolean isEnd = i == (files.size() - 1);
+        IntFunction<Integer> uploadByIndex = i -> {
+            Path filePath = files.get(i);
+            UploadInfo uploadInfo = infos.get(i);
+            boolean isEnd = i == lastFileIndex;
 
-                    int currentCount = count.getAndIncrement();
-                    log.info("Sending file: {} ({}/{}).", filePath.toAbsolutePath(), currentCount, files.size());
-                    uploadFile(filePath, uploadInfo, batch, isEnd, token);
-                    log.debug("Sent file: {} ({}/{}).", filePath.toAbsolutePath(), currentCount, files.size());
-                    return i;
-                }, executor))
+            int currentCount = count.getAndIncrement();
+            log.info("Sending file: {} ({}/{}).", filePath.toAbsolutePath(), currentCount + 1, files.size());
+            uploadFile(filePath, uploadInfo, batch, isEnd, token);
+            log.debug("Sent file: {} ({}/{}).", filePath.toAbsolutePath(), currentCount + 1, files.size());
+            return i;
+        };
+
+        List<CompletableFuture<Integer>> futures = IntStream.range(0, lastFileIndex)
+                .mapToObj(i -> CompletableFuture.supplyAsync(() -> uploadByIndex.apply(i), executor))
                 .collect(toList());
 
 
-        CompletableFuture<Void> allFutures = CompletableFuture.allOf(futures.toArray(new CompletableFuture[files.size()]));
+        CompletableFuture<Void> allFutures = CompletableFuture
+                .allOf(futures.toArray(new CompletableFuture[lastFileIndex]))
+                .thenRun(() -> uploadByIndex.apply(lastFileIndex));
         try {
             allFutures.get();
         } catch (InterruptedException | ExecutionException e) {
