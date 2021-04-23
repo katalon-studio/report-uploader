@@ -1,5 +1,6 @@
 package com.katalon.kit.report.uploader.helper;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.katalon.kit.report.uploader.model.ReportType;
 import com.katalon.kit.report.uploader.model.UploadInfo;
@@ -38,6 +39,8 @@ public class KatalonAnalyticsConnector {
     private static final String KATALON_JUNIT_TEST_REPORTS_URI = "/api/v1/junit/test-reports";
 
     private static final String UPLOAD_URL_URI = "/api/v1/files/upload-url";
+
+    private static final String UPLOAD_URLS_URI = "/api/v1/files/upload-urls";
 
     private static final String TOKEN_URI = "/oauth/token";
 
@@ -132,6 +135,33 @@ public class KatalonAnalyticsConnector {
             InputStream content = httpResponse.getEntity().getContent();
             UploadInfo uploadInfo = objectMapper.readValue(content, UploadInfo.class);
             return uploadInfo;
+        } catch (Exception e) {
+            log.error("Cannot send data to server: {}", url, e);
+            return exceptionHelper.wrap(e);
+        }
+    }
+
+    public List<UploadInfo> getUploadInfos(String token, long projectId, long numberUrl) {
+        String url = serverApiUrl + UPLOAD_URLS_URI;
+        try {
+            URIBuilder uriBuilder = new URIBuilder(url);
+            uriBuilder.setParameter("projectId", String.valueOf(projectId));
+            uriBuilder.setParameter("numberUrl", String.valueOf(numberUrl));
+
+            HttpGet httpGet = new HttpGet(uriBuilder.build());
+
+            HttpResponse httpResponse = httpHelper.sendRequest(
+                    httpGet,
+                    token,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null);
+
+            InputStream content = httpResponse.getEntity().getContent();
+            List<UploadInfo> uploadInfos = objectMapper.readValue(content, new TypeReference<List<UploadInfo>>(){});
+            return uploadInfos;
         } catch (Exception e) {
             log.error("Cannot send data to server: {}", url, e);
             return exceptionHelper.wrap(e);
