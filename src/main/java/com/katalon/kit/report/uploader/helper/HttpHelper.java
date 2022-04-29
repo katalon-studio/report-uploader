@@ -103,6 +103,7 @@ public class HttpHelper {
                 .setSocketTimeout(DEFAULT_SOCKET_TIMEOUT)
                 .build();
         HttpClientBuilder httpClientBuilder = getHttpClientBuilder();
+        httpClientBuilder.useSystemProperties();
         httpClientBuilder.setDefaultRequestConfig(config);
         return httpClientBuilder.build();
     }
