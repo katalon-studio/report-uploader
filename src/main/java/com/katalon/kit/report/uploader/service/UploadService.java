@@ -54,6 +54,8 @@ public class UploadService {
 
     private String uploadInfoFilePath;
 
+    private boolean pushToXray;
+
     @PostConstruct
     private void postConstruct() {
         path = applicationProperties.getPath();
@@ -61,6 +63,7 @@ public class UploadService {
         password = applicationProperties.getPassword();
         projectId = applicationProperties.getProjectId();
         uploadInfoFilePath = applicationProperties.getUploadInfoFilePath();
+        pushToXray = applicationProperties.isPushToXray();
     }
 
     public void upload() {
@@ -89,7 +92,7 @@ public class UploadService {
             UploadInfo uploadInfo = katalonAnalyticsConnector.getUploadInfo(token, projectId);
             katalonAnalyticsConnector.uploadFileWithRetry(uploadInfo.getUploadUrl(), file);
             katalonAnalyticsConnector.uploadFileInfo(
-                    projectId, batch, folderPath, file.getName(), uploadInfo.getPath(), isEnd, token);
+                    projectId, batch, folderPath, file.getName(), uploadInfo.getPath(), isEnd, token, pushToXray);
         }
 
         try {

@@ -48,6 +48,17 @@ public class ApplicationProperties {
     @Value("${project-id}")
     private Long testopsProjectId;
 
+    @Value("${push-to-xray}")
+    private boolean pushToXray;
+
+    public boolean isPushToXray() {
+        return pushToXray;
+    }
+
+    public void setPushToXray(boolean pushToXray) {
+        this.pushToXray = pushToXray;
+    }
+
     public String getServerApiOAuth2ClientId() {
         return serverApiOAuth2ClientId;
     }
