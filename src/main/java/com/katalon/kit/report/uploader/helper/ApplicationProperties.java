@@ -48,15 +48,15 @@ public class ApplicationProperties {
     @Value("${project-id}")
     private Long testopsProjectId;
 
-    @Value("${syncXray}")
-    private boolean syncXray;
+    @Value("${push-to-xray}")
+    private boolean pushToXray;
 
-    public boolean isSyncXray() {
-        return syncXray;
+    public boolean isPushToXray() {
+        return pushToXray;
     }
 
-    public void setSyncXray(boolean syncXray) {
-        this.syncXray = syncXray;
+    public void setPushToXray(boolean pushToXray) {
+        this.pushToXray = pushToXray;
     }
 
     public String getServerApiOAuth2ClientId() {
