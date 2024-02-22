@@ -49,13 +49,13 @@ public class ApplicationProperties {
     private Long testopsProjectId;
 
     @Value("${syncXray}")
-    private Boolean syncXray;
+    private boolean syncXray;
 
-    public Boolean getSyncXray() {
+    public boolean isSyncXray() {
         return syncXray;
     }
 
-    public void setSyncXray(Boolean syncXray) {
+    public void setSyncXray(boolean syncXray) {
         this.syncXray = syncXray;
     }
 

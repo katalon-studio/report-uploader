@@ -54,7 +54,7 @@ public class UploadService {
 
     private String uploadInfoFilePath;
 
-    private Boolean syncXray;
+    private boolean syncXray;
 
     @PostConstruct
     private void postConstruct() {
@@ -63,7 +63,7 @@ public class UploadService {
         password = applicationProperties.getPassword();
         projectId = applicationProperties.getProjectId();
         uploadInfoFilePath = applicationProperties.getUploadInfoFilePath();
-        syncXray = applicationProperties.getSyncXray();
+        syncXray = applicationProperties.isSyncXray();
     }
 
     public void upload() {
