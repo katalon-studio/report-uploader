@@ -80,7 +80,7 @@ public class KatalonAnalyticsConnector {
             String uploadedPath,
             boolean isEnd,
             String token,
-            boolean syncXray) {
+            boolean pushToXray) {
 
         String url;
         switch (reportType) {
@@ -104,7 +104,7 @@ public class KatalonAnalyticsConnector {
             uriBuilder.setParameter("isEnd", String.valueOf(isEnd));
             uriBuilder.setParameter("fileName", fileName);
             uriBuilder.setParameter("uploadedPath", uploadedPath);
-            uriBuilder.setParameter("syncXray", String.valueOf(syncXray));
+            uriBuilder.setParameter("pushToXray", String.valueOf(pushToXray));
 
             HttpPost httpPost = new HttpPost(uriBuilder.build());
             httpHelper.sendRequest(httpPost, token, null, null, null, null, null);
