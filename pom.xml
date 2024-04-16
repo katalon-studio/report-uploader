@@ -5,28 +5,16 @@
 
     <groupId>com.katalon.kit.report.uploader</groupId>
     <artifactId>katalon-report-uploader</artifactId>
-    <version>0.0.8</version>
+    <version>0.0.11</version>
     <packaging>jar</packaging>
 
     <name>katalon-report-uploader</name>
     <description>Katalon Report Uploader</description>
 
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>io.spring.platform</groupId>
-                <artifactId>platform-bom</artifactId>
-                <version>Brussels-SR1</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
-
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.3.RELEASE</version>
+        <version>2.7.18</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -34,7 +22,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
-        <commons-io.version>2.5</commons-io.version>
+        <commons-io.version>2.16.1</commons-io.version>
+        <javax.annotation.version>1.3.2</javax.annotation.version>
+        <snakeyaml.version>1.33</snakeyaml.version>
     </properties>
 
     <dependencies>
@@ -68,13 +58,11 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.9.10.4</version>
         </dependency>
 
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-annotations</artifactId>
-            <version>2.9.10</version>
         </dependency>
 
         <dependency>
@@ -91,7 +79,7 @@
         <dependency>
             <groupId>javax.annotation</groupId>
             <artifactId>javax.annotation-api</artifactId>
-            <version>1.3.2</version>
+            <version>${javax.annotation.version}</version>
         </dependency>
     </dependencies>
 
@@ -103,5 +91,4 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
