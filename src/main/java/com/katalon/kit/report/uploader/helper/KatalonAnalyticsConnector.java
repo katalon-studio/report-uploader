@@ -132,8 +132,8 @@ public class KatalonAnalyticsConnector {
                     null);
 
             InputStream content = httpResponse.getEntity().getContent();
-            UploadInfo uploadInfo = objectMapper.readValue(content, UploadInfo.class);
-            return uploadInfo;
+
+            return objectMapper.readValue(content, UploadInfo.class);
         } catch (Exception e) {
             log.error("Cannot send data to server: {}", url, e);
             return exceptionHelper.wrap(e);
@@ -204,6 +204,7 @@ public class KatalonAnalyticsConnector {
         }
     }
 
+    @SuppressWarnings({"unchecked"})
     public String requestToken(String email, String password) {
         try {
             String url = serverApiUrl + TOKEN_URI;

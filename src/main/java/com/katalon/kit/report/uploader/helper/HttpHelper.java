@@ -25,7 +25,6 @@ import javax.net.ssl.SSLSession;
 import java.io.IOException;
 import java.io.InputStream;
 import java.security.KeyStore;
-import java.security.cert.CertificateException;
 import java.security.cert.X509Certificate;
 import java.util.Base64;
 import java.util.List;
@@ -97,22 +96,21 @@ public class HttpHelper {
     }
 
     private HttpClient getHttpClient(int connectTimeout) {
-
         RequestConfig config = RequestConfig.custom()
                 .setConnectTimeout(connectTimeout)
                 .setSocketTimeout(DEFAULT_SOCKET_TIMEOUT)
                 .build();
-        HttpClientBuilder httpClientBuilder = getHttpClientBuilder();
-        httpClientBuilder.setDefaultRequestConfig(config);
-        return httpClientBuilder.build();
+
+        return getHttpClientBuilder()
+                .setDefaultRequestConfig(config)
+                .useSystemProperties()
+                .build();
     }
 
     private SSLConnectionSocketFactory getSslSocketFactory() {
         SSLContext sslContext = getSslContext();
         HostnameVerifier skipHostnameVerifier = new SkipHostnameVerifier();
-        SSLConnectionSocketFactory sslSocketFactory =
-                new SSLConnectionSocketFactory(sslContext, skipHostnameVerifier);
-        return sslSocketFactory;
+        return new SSLConnectionSocketFactory(sslContext, skipHostnameVerifier);
     }
 
     private SSLContext getSslContext() {
@@ -120,10 +118,10 @@ public class HttpHelper {
             SSLContextBuilder sslContextBuilder = new SSLContextBuilder();
             KeyStore keyStore = KeyStore.getInstance(KeyStore.getDefaultType());
             TrustStrategy trustStrategy = new TrustAllStrategy();
-            sslContextBuilder.loadTrustMaterial(keyStore, trustStrategy);
-            sslContextBuilder.useProtocol("TLSv1.2");
-            SSLContext sslContext = sslContextBuilder.build();
-            return sslContext;
+
+            return sslContextBuilder.loadTrustMaterial(keyStore, trustStrategy)
+                    .setProtocol("TLSv1.2")
+                    .build();
         } catch (Exception e) {
             log.error("Cannot get SSL context", e);
             return exceptionHelper.wrap(e);
@@ -134,9 +132,8 @@ public class HttpHelper {
      * Trust all certificates.
      */
     private static class TrustAllStrategy implements TrustStrategy {
-
         @Override
-        public boolean isTrusted(X509Certificate[] chain, String authType) throws CertificateException {
+        public boolean isTrusted(X509Certificate[] chain, String authType) {
             return true;
         }
     }
