@@ -46,10 +46,13 @@ public class ApplicationProperties {
     private String reportPath;
 
     @Value("${project-id}")
-    private Long testopsProjectId;
+    private Long testOpsProjectId;
 
     @Value("${push-to-xray}")
     private boolean pushToXray;
+
+    @Value("${number-of-tasks}")
+    private Integer numberOfTasks;
 
     public boolean isPushToXray() {
         return pushToXray;
@@ -100,6 +103,18 @@ public class ApplicationProperties {
     }
 
     public Long getProjectId() {
-        return testopsProjectId == null ? projectId : testopsProjectId;
+        return testOpsProjectId == null ? projectId : testOpsProjectId;
+    }
+
+    /**
+     * @return the number of parallel upload tasks, if the configure is less than 1, the number
+     * of tasks will be the number of available processors.
+     */
+    public int getNumberOfTasks() {
+        if (numberOfTasks == null || numberOfTasks < 1) {
+            return Runtime.getRuntime().availableProcessors();
+        }
+
+        return numberOfTasks;
     }
 }
