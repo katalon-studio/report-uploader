@@ -45,6 +45,6 @@ jobs:
         with:
           context: .
           platforms: ${{ env.platforms }}
-          push: false
+          push: true
           labels: ${{ steps.set_metadata.outputs.labels }}
           tags: ${{ steps.set_metadata.outputs.tags }}
