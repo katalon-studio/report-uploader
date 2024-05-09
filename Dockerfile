@@ -1,4 +1,4 @@
-FROM maven:3.6.3-jdk-8 as build
+FROM maven:3.9.6-eclipse-temurin-8 as build
 ARG KATALON_ROOT_DIR=/katalon
 RUN mkdir -p $KATALON_ROOT_DIR
 
