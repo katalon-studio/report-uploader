@@ -16,40 +16,42 @@ import java.util.regex.Pattern;
 
 @Component
 public class FileHelper {
+    private static final Logger LOG = LogHelper.getLogger();
 
-    private static final Logger log = LogHelper.getLogger();
+    private final ObjectMapper objectMapper;
+    private final ExceptionHelper exceptionHelper;
 
     @Autowired
-    private ObjectMapper objectMapper;
-
-    @Autowired
-    private ExceptionHelper exceptionHelper;
+    public FileHelper(ObjectMapper objectMapper, ExceptionHelper exceptionHelper) {
+        this.objectMapper = objectMapper;
+        this.exceptionHelper = exceptionHelper;
+    }
 
     private Path createPath(String path) {
-        FileSystem fileSystem = FileSystems.getDefault();
+        final FileSystem fileSystem = FileSystems.getDefault();
         return fileSystem.getPath(path);
     }
 
     public List<Path> scanFiles(String path, String filePattern) {
-        log.info("Looking for log files");
+        LOG.info("Looking for log files");
         try {
             List<Path> filePaths = new LinkedList<>();
             Path rootPath = createPath(path);
             Files.walkFileTree(rootPath, new SimpleFileVisitor<Path>() {
                 @Override
                 public FileVisitResult visitFile(Path visitedFile, BasicFileAttributes attrs) {
-                    String fileName = visitedFile.toFile().getName();
-                    boolean matched = Pattern.matches(filePattern, fileName);
-                    if (matched) {
-                        log.info("Found file {}", visitedFile.toAbsolutePath());
-                        filePaths.add(visitedFile);
-                    }
-                    return FileVisitResult.CONTINUE;
+                String fileName = visitedFile.toFile().getName();
+                boolean matched = Pattern.matches(filePattern, fileName);
+                if (matched) {
+                    LOG.info("Found file {}", visitedFile.toAbsolutePath());
+                    filePaths.add(visitedFile);
+                }
+                return FileVisitResult.CONTINUE;
                 }
             });
             return filePaths;
         } catch (Exception e) {
-            log.error("Exception when scanning files", e);
+            LOG.error("Exception when scanning files", e);
             return exceptionHelper.wrap(e);
         }
     }
@@ -58,7 +60,7 @@ public class FileHelper {
         if (StringUtils.isNotBlank(filePath)) {
             String infoAsJSONText = objectMapper.writeValueAsString(uploadInfo);
             Files.write(Paths.get(filePath), infoAsJSONText.getBytes());
-            log.info("Information has been saved to file {}", filePath);
+            LOG.info("Information has been saved to file {}", filePath);
         }
     }
 }

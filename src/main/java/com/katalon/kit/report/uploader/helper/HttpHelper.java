@@ -32,14 +32,16 @@ import java.util.List;
 @Component
 public class HttpHelper {
 
-    private static final Logger log = LogHelper.getLogger();
+    private static final Logger LOG = LogHelper.getLogger();
 
     private static final int DEFAULT_CONNECT_TIMEOUT = Integer.MAX_VALUE;
-
     private static final int DEFAULT_SOCKET_TIMEOUT = Integer.MAX_VALUE;
+    private final ExceptionHelper exceptionHelper;
 
     @Autowired
-    private ExceptionHelper exceptionHelper;
+    public HttpHelper(ExceptionHelper exceptionHelper) {
+        this.exceptionHelper = exceptionHelper;
+    }
 
     private HttpClient getHttpClient() {
         return getHttpClient(DEFAULT_CONNECT_TIMEOUT);
@@ -80,9 +82,9 @@ public class HttpHelper {
             ((HttpEntityEnclosingRequestBase) httpRequest).setEntity(entity);
         }
 
-        log.debug("Request: {}", httpRequest);
+        LOG.debug("Request: {}", httpRequest);
         HttpResponse httpResponse = httpClient.execute(httpRequest);
-        log.debug("Response: {}", httpResponse);
+        LOG.debug("Response: {}", httpResponse);
 
         return httpResponse;
     }
@@ -123,7 +125,7 @@ public class HttpHelper {
                     .setProtocol("TLSv1.2")
                     .build();
         } catch (Exception e) {
-            log.error("Cannot get SSL context", e);
+            LOG.error("Cannot get SSL context", e);
             return exceptionHelper.wrap(e);
         }
     }
