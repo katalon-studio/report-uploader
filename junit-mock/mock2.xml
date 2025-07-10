@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mock Suite" time="10.000" tests="5" failures="1" errors="1" skipped="0">
+  <testsuite name="Mock Suite" tests="5" failures="1" errors="1" skipped="0" time="10.000" timestamp="2025-07-10T11:00:00.000Z">
+    <testcase classname="mock.MockTest" name="testPass" time="1.000"/>
+    <testcase classname="mock.MockTest" name="testFail" time="2.000"/>
+    <testcase classname="mock.MockTest" name="testError" time="3.000">
+      <error type="NullPointerException" message="null pointer">Stacktrace here</error>
+    </testcase>
+    <testcase classname="mock.MockTest" name="testSkip" time="0.000"/>
+    <testcase classname="mock.MockTest" name="testNewFail" time="4.000">
+      <failure type="AssertionError" message="new failure">Stacktrace here</failure>
+    </testcase>
+  </testsuite>
+</testsuites> 

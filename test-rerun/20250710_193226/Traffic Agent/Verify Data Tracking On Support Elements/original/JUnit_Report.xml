@@ -1,0 +1,880 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Verify Data Tracking On Support Elements" time="245.247" tests="9" failures="2" errors="0">
+   <testsuite name="Verify Data Tracking On Support Elements" tests="9" failures="2" errors="0" time="245.247" skipped="0" timestamp="2025-07-10T12:32:30.787Z" hostname="viet.dnguyen - localhost" id="Test Suites/Traffic Agent/Verify Data Tracking On Support Elements">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="/Users/viet.dnguyen/katalon/kqe-truetest-automation/Reports/20250710_193226/Traffic Agent/Verify Data Tracking On Support Elements/20250710_193227"/>
+         <property name="logFiles" value="/Users/viet.dnguyen/katalon/kqe-truetest-automation/Reports/20250710_193226/Traffic Agent/Verify Data Tracking On Support Elements/20250710_193227/execution0.log, /Users/viet.dnguyen/katalon/kqe-truetest-automation/Reports/20250710_193226/Traffic Agent/Verify Data Tracking On Support Elements/20250710_193227/console0.log"/>
+         <property name="attachments" value=""/>
+         <property name="userFullName" value="Viet Nguyen"/>
+         <property name="hostName" value="viet.dnguyen - localhost"/>
+         <property name="hostAddress" value="127.0.0.1"/>
+         <property name="projectName" value="kqe-truetest-automation"/>
+         <property name="os" value="Mac OS X 64bit"/>
+         <property name="katalonVersion" value="10.2.3.0"/>
+      </properties>
+      <testcase name="Test Cases/Traffic Agent/TC001 - Verify data tracking on element Input_Checkbox" time="20.273" classname="Test Cases/Traffic Agent/TC001 - Verify data tracking on element Input_Checkbox" status="FAILED">
+         <failure type="FAILED" message="Test Cases/Traffic Agent/TC001 - Verify data tracking on element Input_Checkbox FAILED.&#xa;Reason:&#xa;java.lang.AssertionError: Expected 4 click action requests but found 3. Expression: (clickRequests.size() == 4)&#xa;	at TC001 - Verify data tracking on element Input_Checkbox.run(TC001 - Verify data tracking on element Input_Checkbox:63)&#xa;	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xa;	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:485)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:476)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:455)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:447)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:321)&#xa;	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:160)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:107)&#xa;	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:195)&#xa;	at TempTestSuite1752150747624.run(TempTestSuite1752150747624.groovy:35)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#xa;	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xa;"/>
+         <system-out><![CDATA[10-07-2025T19:32:30 - [TEST_CASE][FAILED] - Test Cases/Traffic Agent/TC001 - Verify data tracking on element Input_Checkbox: Test Cases/Traffic Agent/TC001 - Verify data tracking on element Input_Checkbox FAILED.
+Reason:
+java.lang.AssertionError: Expected 4 click action requests but found 3. Expression: (clickRequests.size() == 4)
+	at TC001 - Verify data tracking on element Input_Checkbox.run(TC001 - Verify data tracking on element Input_Checkbox:63)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:485)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:476)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:455)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:447)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:321)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:160)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:107)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:195)
+	at TempTestSuite1752150747624.run(TempTestSuite1752150747624.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+10-07-2025T19:32:31 - [TEST_STEP][PASSED] - reportDir = getReportFolder(): null
+
+10-07-2025T19:32:31 - [TEST_STEP][PASSED] - reportDir = reportDir.replaceFirst("/Reports/", "/target/"): null
+
+10-07-2025T19:32:31 - [TEST_STEP][PASSED] - extensionDir = ConfigExtension.getExtensionFromSource(AGENT_EXTENSION_DIR, reportDir): null
+
+10-07-2025T19:32:31 - [TEST_STEP][PASSED] - ConfigExtension.setConfig(extensionDir, CLIENT_CODE, ENVIRONMENT_PREFIX, TRUETEST_HOSTS): null
+
+10-07-2025T19:32:31 - [TEST_STEP][PASSED] - playwrightManager = new com.katalon.automation.playwright.PlaywrightManager(): null
+
+10-07-2025T19:32:33 - [TEST_STEP][PASSED] - networkMonitor = new com.katalon.automation.playwright.NetworkTrafficMonitor(): null
+
+10-07-2025T19:32:33 - [TEST_STEP][PASSED] - playwrightManager.launchBrowserWithPersistentContext(false, extensionDir, true, reportDir): null
+
+10-07-2025T19:32:37 - [TEST_STEP][PASSED] - playwrightManager.newPage(): null
+
+10-07-2025T19:32:37 - [TEST_STEP][PASSED] - playwrightManager.startNetworkListener(networkMonitor.&captureRequest, networkMonitor.&captureResponse): null
+
+10-07-2025T19:32:37 - [TEST_STEP][PASSED] - playwrightManager.navigateTo("https://base-component.aut.katalon.com/input/checkbox"): null
+
+10-07-2025T19:32:40 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:32:42 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Input/Checkbox/Preferences/Receive newsletter"))): null
+
+10-07-2025T19:32:44 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Input/Checkbox/Preferences/Enable notifications"))): null
+
+10-07-2025T19:32:45 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Input/Checkbox/Preferences/Accept terms and conditions"))): null
+
+10-07-2025T19:32:47 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Input/Checkbox/Preferences/Show Selection"))): null
+
+10-07-2025T19:32:48 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:32:50 - [TEST_STEP][PASSED] - playwrightManager.stopTracing($reportDir/trace.zip): null
+
+10-07-2025T19:32:51 - [TEST_STEP][PASSED] - playwrightManager.close(): null
+
+10-07-2025T19:32:51 - [TEST_STEP][PASSED] - trackingTraffic = networkMonitor.getRequestsByUrlPattern("KA-"): null
+
+10-07-2025T19:32:51 - [TEST_STEP][PASSED] - trackingConfigRequest = json").get(0): null
+
+10-07-2025T19:32:51 - [TEST_STEP][PASSED] - actionRequests = TrackingData.getRequestsWithAction(trackingTraffic): null
+
+10-07-2025T19:32:51 - [TEST_STEP][PASSED] - timestamps = TrackingData.getTimestamps(actionRequests): null
+
+10-07-2025T19:32:51 - [TEST_STEP][PASSED] - assert timestamps.size() == toSet().size() : "Each action should not have timestamp get duplicated": null
+
+10-07-2025T19:32:51 - [TEST_STEP][PASSED] - clickRequests = TrackingData.getRequestsByAction(trackingTraffic, "click"): null
+
+10-07-2025T19:32:51 - [TEST_STEP][FAILED] - assert clickRequests.size() == 4: Test Cases/Traffic Agent/TC001 - Verify data tracking on element Input_Checkbox FAILED.
+Reason:
+java.lang.AssertionError: Expected 4 click action requests but found 3. Expression: (clickRequests.size() == 4)
+	at TC001 - Verify data tracking on element Input_Checkbox.run(TC001 - Verify data tracking on element Input_Checkbox:63)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:485)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:476)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:455)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:447)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:321)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:160)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:107)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:195)
+	at TempTestSuite1752150747624.run(TempTestSuite1752150747624.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+10-07-2025T19:32:51 - [MESSAGE][FAILED] - Test Cases/Traffic Agent/TC001 - Verify data tracking on element Input_Checkbox FAILED.
+Reason:
+java.lang.AssertionError: Expected 4 click action requests but found 3. Expression: (clickRequests.size() == 4)
+	at TC001 - Verify data tracking on element Input_Checkbox.run(TC001 - Verify data tracking on element Input_Checkbox:63)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:485)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:476)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:455)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:447)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:321)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:160)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:107)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:195)
+	at TempTestSuite1752150747624.run(TempTestSuite1752150747624.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-out>
+         <system-err><![CDATA[10-07-2025T19:32:30 - [TEST_CASE][FAILED] - Test Cases/Traffic Agent/TC001 - Verify data tracking on element Input_Checkbox: Test Cases/Traffic Agent/TC001 - Verify data tracking on element Input_Checkbox FAILED.
+Reason:
+java.lang.AssertionError: Expected 4 click action requests but found 3. Expression: (clickRequests.size() == 4)
+	at TC001 - Verify data tracking on element Input_Checkbox.run(TC001 - Verify data tracking on element Input_Checkbox:63)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:485)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:476)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:455)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:447)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:321)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:160)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:107)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:195)
+	at TempTestSuite1752150747624.run(TempTestSuite1752150747624.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Traffic Agent/TC002 - Verify data tracking on element Input_Text (Click and Input)" time="22.598" classname="Test Cases/Traffic Agent/TC002 - Verify data tracking on element Input_Text (Click and Input)" status="PASSED">
+         <system-out><![CDATA[10-07-2025T19:32:51 - [TEST_CASE][PASSED] - Test Cases/Traffic Agent/TC002 - Verify data tracking on element Input_Text (Click and Input): Test Cases/Traffic Agent/TC002 - Verify data tracking on element Input_Text (Click and Input)
+
+10-07-2025T19:32:51 - [TEST_STEP][PASSED] - reportDir = getReportFolder(): null
+
+10-07-2025T19:32:51 - [TEST_STEP][PASSED] - reportDir = reportDir.replaceFirst("/Reports/", "/target/"): null
+
+10-07-2025T19:32:51 - [TEST_STEP][PASSED] - extensionDir = ConfigExtension.getExtensionFromSource(AGENT_EXTENSION_DIR, reportDir): null
+
+10-07-2025T19:32:51 - [TEST_STEP][PASSED] - ConfigExtension.setConfig(extensionDir, CLIENT_CODE, ENVIRONMENT_PREFIX, TRUETEST_HOSTS): null
+
+10-07-2025T19:32:51 - [TEST_STEP][PASSED] - playwrightManager = new com.katalon.automation.playwright.PlaywrightManager(): null
+
+10-07-2025T19:32:51 - [TEST_STEP][PASSED] - networkMonitor = new com.katalon.automation.playwright.NetworkTrafficMonitor(): null
+
+10-07-2025T19:32:51 - [TEST_STEP][PASSED] - playwrightManager.launchBrowserWithPersistentContext(false, extensionDir, true, reportDir): null
+
+10-07-2025T19:32:52 - [TEST_STEP][PASSED] - playwrightManager.newPage(): null
+
+10-07-2025T19:32:52 - [TEST_STEP][PASSED] - playwrightManager.startNetworkListener(networkMonitor.&captureRequest, networkMonitor.&captureResponse): null
+
+10-07-2025T19:32:52 - [TEST_STEP][PASSED] - playwrightManager.navigateTo("https://base-component.aut.katalon.com/input/text"): null
+
+10-07-2025T19:32:55 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:32:57 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Input/Text/Mandatory Textbox"))): null
+
+10-07-2025T19:32:59 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Input/Text/Mandatory Textbox")), "This is input for mandatory field"): null
+
+10-07-2025T19:33:00 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Input/Text/Optional Textbox"))): null
+
+10-07-2025T19:33:02 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Input/Text/Optional Textbox")), "This is input for optional field"): null
+
+10-07-2025T19:33:03 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Input/Text/Mask Value Textbox"))): null
+
+10-07-2025T19:33:05 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Input/Text/Mask Value Textbox")), "This is input for mask value field"): null
+
+10-07-2025T19:33:06 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Input/Text/Uncontrolled Input Textbox"))): null
+
+10-07-2025T19:33:08 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Input/Text/Uncontrolled Input Textbox")), "This is input for uncontrolled input field"): null
+
+10-07-2025T19:33:10 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Input/Text/Show Text Button"))): null
+
+10-07-2025T19:33:11 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:33:13 - [TEST_STEP][PASSED] - playwrightManager.stopTracing($reportDir/trace.zip): null
+
+10-07-2025T19:33:13 - [TEST_STEP][PASSED] - playwrightManager.close(): null
+
+10-07-2025T19:33:13 - [TEST_STEP][PASSED] - trackingTraffic = networkMonitor.getRequestsByUrlPattern("KA-"): null
+
+10-07-2025T19:33:13 - [TEST_STEP][PASSED] - trackingConfigRequest = json").get(0): null
+
+10-07-2025T19:33:13 - [TEST_STEP][PASSED] - actionRequests = TrackingData.getRequestsWithAction(trackingTraffic): null
+
+10-07-2025T19:33:13 - [TEST_STEP][PASSED] - timestamps = TrackingData.getTimestamps(actionRequests): null
+
+10-07-2025T19:33:13 - [TEST_STEP][PASSED] - assert timestamps.size() == toSet().size() : "Each action should not have timestamp get duplicated": null
+
+10-07-2025T19:33:13 - [TEST_STEP][PASSED] - clickRequests = TrackingData.getRequestsByAction(trackingTraffic, "click"): null
+
+10-07-2025T19:33:13 - [TEST_STEP][PASSED] - assert clickRequests.size() == 5: null
+
+10-07-2025T19:33:13 - [TEST_STEP][PASSED] - inputRequests = TrackingData.getRequestsByAction(trackingTraffic, "input"): null
+
+10-07-2025T19:33:13 - [TEST_STEP][PASSED] - assert inputRequests.size() == 4: null
+
+10-07-2025T19:33:13 - [TEST_STEP][PASSED] - trackingConfig = TrackingConfig.fromJson(trackingConfigRequest.getResponseBody()): null
+
+10-07-2025T19:33:13 - [TEST_STEP][PASSED] - out.println("Tracking Config: " + context_enabled): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Traffic Agent/TC003 - Verify data tracking on element Input_Text (Input and Press Tab)" time="24.553" classname="Test Cases/Traffic Agent/TC003 - Verify data tracking on element Input_Text (Input and Press Tab)" status="PASSED">
+         <system-out><![CDATA[10-07-2025T19:33:13 - [TEST_CASE][PASSED] - Test Cases/Traffic Agent/TC003 - Verify data tracking on element Input_Text (Input and Press Tab): Test Cases/Traffic Agent/TC003 - Verify data tracking on element Input_Text (Input and Press Tab)
+
+10-07-2025T19:33:13 - [TEST_STEP][PASSED] - reportDir = getReportFolder(): null
+
+10-07-2025T19:33:13 - [TEST_STEP][PASSED] - reportDir = reportDir.replaceFirst("/Reports/", "/target/"): null
+
+10-07-2025T19:33:13 - [TEST_STEP][PASSED] - extensionDir = ConfigExtension.getExtensionFromSource(AGENT_EXTENSION_DIR, reportDir): null
+
+10-07-2025T19:33:13 - [TEST_STEP][PASSED] - ConfigExtension.setConfig(extensionDir, CLIENT_CODE, ENVIRONMENT_PREFIX, TRUETEST_HOSTS): null
+
+10-07-2025T19:33:13 - [TEST_STEP][PASSED] - playwrightManager = new com.katalon.automation.playwright.PlaywrightManager(): null
+
+10-07-2025T19:33:14 - [TEST_STEP][PASSED] - networkMonitor = new com.katalon.automation.playwright.NetworkTrafficMonitor(): null
+
+10-07-2025T19:33:14 - [TEST_STEP][PASSED] - playwrightManager.launchBrowserWithPersistentContext(false, extensionDir, true, reportDir): null
+
+10-07-2025T19:33:14 - [TEST_STEP][PASSED] - playwrightManager.newPage(): null
+
+10-07-2025T19:33:14 - [TEST_STEP][PASSED] - playwrightManager.startNetworkListener(networkMonitor.&captureRequest, networkMonitor.&captureResponse): null
+
+10-07-2025T19:33:14 - [TEST_STEP][PASSED] - playwrightManager.navigateTo("https://base-component.aut.katalon.com/input/text"): null
+
+10-07-2025T19:33:18 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:33:20 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Input/Text/Mandatory Textbox"))): null
+
+10-07-2025T19:33:22 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Input/Text/Mandatory Textbox")), "This is input for mandatory field"): null
+
+10-07-2025T19:33:23 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:33:25 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Input/Text/Optional Textbox")), "This is input for optional field"): null
+
+10-07-2025T19:33:26 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:33:28 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Input/Text/Mask Value Textbox")), "This is input for mask value field"): null
+
+10-07-2025T19:33:30 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:33:31 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Input/Text/Uncontrolled Input Textbox")), "This is input for uncontrolled input field"): null
+
+10-07-2025T19:33:33 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:33:34 - [TEST_STEP][PASSED] - keyboard().press("Enter"): null
+
+10-07-2025T19:33:36 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:33:38 - [TEST_STEP][PASSED] - playwrightManager.stopTracing($reportDir/trace.zip): null
+
+10-07-2025T19:33:38 - [TEST_STEP][PASSED] - playwrightManager.close(): null
+
+10-07-2025T19:33:38 - [TEST_STEP][PASSED] - trackingTraffic = networkMonitor.getRequestsByUrlPattern("KA-"): null
+
+10-07-2025T19:33:38 - [TEST_STEP][PASSED] - trackingConfigRequest = json").get(0): null
+
+10-07-2025T19:33:38 - [TEST_STEP][PASSED] - actionRequests = TrackingData.getRequestsWithAction(trackingTraffic): null
+
+10-07-2025T19:33:38 - [TEST_STEP][PASSED] - timestamps = TrackingData.getTimestamps(actionRequests): null
+
+10-07-2025T19:33:38 - [TEST_STEP][PASSED] - assert timestamps.size() == toSet().size() : "Each action should not have timestamp get duplicated": null
+
+10-07-2025T19:33:38 - [TEST_STEP][PASSED] - clickRequests = TrackingData.getRequestsByAction(trackingTraffic, "click"): null
+
+10-07-2025T19:33:38 - [TEST_STEP][PASSED] - inputRequests = TrackingData.getRequestsByAction(trackingTraffic, "input"): null
+
+10-07-2025T19:33:38 - [TEST_STEP][PASSED] - keydownRequests = TrackingData.getRequestsByAction(trackingTraffic, "keydown"): null
+
+10-07-2025T19:33:38 - [TEST_STEP][PASSED] - assert clickRequests.size() == 1: null
+
+10-07-2025T19:33:38 - [TEST_STEP][PASSED] - assert keydownRequests.size() == 5: null
+
+10-07-2025T19:33:38 - [TEST_STEP][PASSED] - assert inputRequests.size() == 4: null
+
+10-07-2025T19:33:38 - [TEST_STEP][PASSED] - trackingConfig = TrackingConfig.fromJson(trackingConfigRequest.getResponseBody()): null
+
+10-07-2025T19:33:38 - [TEST_STEP][PASSED] - out.println("Tracking Config: " + context_enabled): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Traffic Agent/TC004 - Verify no redundant input action after pressing Enter key" time="15.89" classname="Test Cases/Traffic Agent/TC004 - Verify no redundant input action after pressing Enter key" status="PASSED">
+         <system-out><![CDATA[10-07-2025T19:33:38 - [TEST_CASE][PASSED] - Test Cases/Traffic Agent/TC004 - Verify no redundant input action after pressing Enter key: Test Cases/Traffic Agent/TC004 - Verify no redundant input action after pressing Enter key
+
+10-07-2025T19:33:38 - [TEST_STEP][PASSED] - reportDir = getReportFolder(): null
+
+10-07-2025T19:33:38 - [TEST_STEP][PASSED] - reportDir = reportDir.replaceFirst("/Reports/", "/target/"): null
+
+10-07-2025T19:33:38 - [TEST_STEP][PASSED] - extensionDir = ConfigExtension.getExtensionFromSource(AGENT_EXTENSION_DIR, reportDir): null
+
+10-07-2025T19:33:38 - [TEST_STEP][PASSED] - ConfigExtension.setConfig(extensionDir, CLIENT_CODE, ENVIRONMENT_PREFIX, TRUETEST_HOSTS): null
+
+10-07-2025T19:33:38 - [TEST_STEP][PASSED] - playwrightManager = new com.katalon.automation.playwright.PlaywrightManager(): null
+
+10-07-2025T19:33:38 - [TEST_STEP][PASSED] - networkMonitor = new com.katalon.automation.playwright.NetworkTrafficMonitor(): null
+
+10-07-2025T19:33:38 - [TEST_STEP][PASSED] - playwrightManager.launchBrowserWithPersistentContext(false, extensionDir, true, reportDir): null
+
+10-07-2025T19:33:39 - [TEST_STEP][PASSED] - playwrightManager.newPage(): null
+
+10-07-2025T19:33:39 - [TEST_STEP][PASSED] - playwrightManager.startNetworkListener(networkMonitor.&captureRequest, networkMonitor.&captureResponse): null
+
+10-07-2025T19:33:39 - [TEST_STEP][PASSED] - playwrightManager.navigateTo("https://base-component.aut.katalon.com/sauce-login/"): null
+
+10-07-2025T19:33:42 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:33:44 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Sauce Login/Username Textbox")), "standard_user"): null
+
+10-07-2025T19:33:45 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Sauce Login/Password Textbox"))): null
+
+10-07-2025T19:33:47 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Sauce Login/Password Textbox")), "secret_sauce"): null
+
+10-07-2025T19:33:48 - [TEST_STEP][PASSED] - keyboard().press("Enter"): null
+
+10-07-2025T19:33:50 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Sauce Login/Add to Cart Button", ["index":"1"]))): null
+
+10-07-2025T19:33:52 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:33:54 - [TEST_STEP][PASSED] - playwrightManager.stopTracing($reportDir/trace.zip): null
+
+10-07-2025T19:33:54 - [TEST_STEP][PASSED] - playwrightManager.close(): null
+
+10-07-2025T19:33:54 - [TEST_STEP][PASSED] - trackingTraffic = networkMonitor.getRequestsByUrlPattern("KA-"): null
+
+10-07-2025T19:33:54 - [TEST_STEP][PASSED] - trackingConfigRequest = json").get(0): null
+
+10-07-2025T19:33:54 - [TEST_STEP][PASSED] - actionRequests = TrackingData.getRequestsWithAction(trackingTraffic): null
+
+10-07-2025T19:33:54 - [TEST_STEP][PASSED] - timestamps = TrackingData.getTimestamps(actionRequests): null
+
+10-07-2025T19:33:54 - [TEST_STEP][PASSED] - assert timestamps.size() == toSet().size() : "Each action should not have timestamp get duplicated": null
+
+10-07-2025T19:33:54 - [TEST_STEP][PASSED] - clickRequests = TrackingData.getRequestsByAction(trackingTraffic, "click"): null
+
+10-07-2025T19:33:54 - [TEST_STEP][PASSED] - inputRequests = TrackingData.getRequestsByAction(trackingTraffic, "input"): null
+
+10-07-2025T19:33:54 - [TEST_STEP][PASSED] - keydownRequests = TrackingData.getRequestsByAction(trackingTraffic, "keydown"): null
+
+10-07-2025T19:33:54 - [TEST_STEP][PASSED] - submitRequets = TrackingData.getRequestsByAction(trackingTraffic, "submit"): null
+
+10-07-2025T19:33:54 - [TEST_STEP][PASSED] - assert clickRequests.size() == 2: null
+
+10-07-2025T19:33:54 - [TEST_STEP][PASSED] - assert keydownRequests.size() == 1: null
+
+10-07-2025T19:33:54 - [TEST_STEP][PASSED] - TrackingData.printRequests(inputRequests): null
+
+10-07-2025T19:33:54 - [TEST_STEP][PASSED] - assert inputRequests.size() == 2: null
+
+10-07-2025T19:33:54 - [TEST_STEP][PASSED] - assert submitRequets.size() == 1: null
+
+10-07-2025T19:33:54 - [TEST_STEP][PASSED] - trackingConfig = TrackingConfig.fromJson(trackingConfigRequest.getResponseBody()): null
+
+10-07-2025T19:33:54 - [TEST_STEP][PASSED] - out.println("Tracking Config: " + context_enabled): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Traffic Agent/TC005 - Verify tracking action input and click in rich text editor" time="15.645" classname="Test Cases/Traffic Agent/TC005 - Verify tracking action input and click in rich text editor" status="PASSED">
+         <system-out><![CDATA[10-07-2025T19:33:54 - [TEST_CASE][PASSED] - Test Cases/Traffic Agent/TC005 - Verify tracking action input and click in rich text editor: Test Cases/Traffic Agent/TC005 - Verify tracking action input and click in rich text editor
+
+10-07-2025T19:33:54 - [TEST_STEP][PASSED] - reportDir = getReportFolder(): null
+
+10-07-2025T19:33:54 - [TEST_STEP][PASSED] - reportDir = reportDir.replaceFirst("/Reports/", "/target/"): null
+
+10-07-2025T19:33:54 - [TEST_STEP][PASSED] - extensionDir = ConfigExtension.getExtensionFromSource(AGENT_EXTENSION_DIR, reportDir): null
+
+10-07-2025T19:33:54 - [TEST_STEP][PASSED] - ConfigExtension.setConfig(extensionDir, CLIENT_CODE, ENVIRONMENT_PREFIX, TRUETEST_HOSTS): null
+
+10-07-2025T19:33:54 - [TEST_STEP][PASSED] - playwrightManager = new com.katalon.automation.playwright.PlaywrightManager(): null
+
+10-07-2025T19:33:54 - [TEST_STEP][PASSED] - networkMonitor = new com.katalon.automation.playwright.NetworkTrafficMonitor(): null
+
+10-07-2025T19:33:54 - [TEST_STEP][PASSED] - playwrightManager.launchBrowserWithPersistentContext(false, extensionDir, true, reportDir): null
+
+10-07-2025T19:33:55 - [TEST_STEP][PASSED] - playwrightManager.newPage(): null
+
+10-07-2025T19:33:55 - [TEST_STEP][PASSED] - playwrightManager.startNetworkListener(networkMonitor.&captureRequest, networkMonitor.&captureResponse): null
+
+10-07-2025T19:33:55 - [TEST_STEP][PASSED] - playwrightManager.navigateTo("https://base-component.aut.katalon.com/rich-text-editor/"): null
+
+10-07-2025T19:33:57 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:33:59 - [TEST_STEP][PASSED] - findSelector(findTestObject("Object Repository/Test AUT/Base Component/Rich Text Editor/Rich Text Editor"))).pressSequentially("Hello World!"): null
+
+10-07-2025T19:34:01 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Rich Text Editor/Save Button"))): null
+
+10-07-2025T19:34:02 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:34:04 - [TEST_STEP][PASSED] - trackingTraffic = networkMonitor.getRequestsByUrlPattern("KA-"): null
+
+10-07-2025T19:34:04 - [TEST_STEP][PASSED] - trackingConfigRequest = json").get(0): null
+
+10-07-2025T19:34:04 - [TEST_STEP][PASSED] - actionRequests = TrackingData.getRequestsWithAction(trackingTraffic): null
+
+10-07-2025T19:34:04 - [TEST_STEP][PASSED] - timestamps = TrackingData.getTimestamps(actionRequests): null
+
+10-07-2025T19:34:04 - [TEST_STEP][PASSED] - actions = TrackingData.extractValuesWithSortByTimestamp(actionRequests, "$.action"): null
+
+10-07-2025T19:34:04 - [TEST_STEP][PASSED] - TrackingData.printRequests(actionRequests): null
+
+10-07-2025T19:34:04 - [TEST_STEP][PASSED] - assert timestamps.size() == toSet().size() : "Each action should not have timestamp get duplicated": null
+
+10-07-2025T19:34:04 - [TEST_STEP][PASSED] - assert actions == ["view", "input", "click"]: null
+
+10-07-2025T19:34:04 - [TEST_STEP][PASSED] - networkMonitor = new com.katalon.automation.playwright.NetworkTrafficMonitor(): null
+
+10-07-2025T19:34:04 - [TEST_STEP][PASSED] - playwrightManager.startNetworkListener(networkMonitor.&captureRequest, networkMonitor.&captureResponse): null
+
+10-07-2025T19:34:04 - [TEST_STEP][PASSED] - findSelector(findTestObject("Object Repository/Test AUT/Base Component/Rich Text Editor/Rich Text Editor"))).press("Enter"): null
+
+10-07-2025T19:34:06 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Rich Text Editor/Save Button"))): null
+
+10-07-2025T19:34:07 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:34:09 - [TEST_STEP][PASSED] - trackingTraffic = networkMonitor.getRequestsByUrlPattern("KA-"): null
+
+10-07-2025T19:34:09 - [TEST_STEP][PASSED] - actionRequests = TrackingData.getRequestsWithAction(trackingTraffic): null
+
+10-07-2025T19:34:09 - [TEST_STEP][PASSED] - timestamps = TrackingData.getTimestamps(actionRequests): null
+
+10-07-2025T19:34:09 - [TEST_STEP][PASSED] - actions = TrackingData.extractValuesWithSortByTimestamp(actionRequests, "$.action"): null
+
+10-07-2025T19:34:09 - [TEST_STEP][PASSED] - assert timestamps.size() == toSet().size() : "Each action should not have timestamp get duplicated": null
+
+10-07-2025T19:34:09 - [TEST_STEP][PASSED] - assert actions == ["input", "click"]: null
+
+10-07-2025T19:34:09 - [TEST_STEP][PASSED] - playwrightManager.stopTracing($reportDir/trace.zip): null
+
+10-07-2025T19:34:09 - [TEST_STEP][PASSED] - playwrightManager.close(): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Traffic Agent/TC006 - Verify data tracking on element Input type Radio Search Submit (Regular Search)" time="23.225" classname="Test Cases/Traffic Agent/TC006 - Verify data tracking on element Input type Radio Search Submit (Regular Search)" status="PASSED">
+         <system-out><![CDATA[10-07-2025T19:34:09 - [TEST_CASE][PASSED] - Test Cases/Traffic Agent/TC006 - Verify data tracking on element Input type Radio Search Submit (Regular Search): Test Cases/Traffic Agent/TC006 - Verify data tracking on element Input type Radio Search Submit (Regular Search)
+
+10-07-2025T19:34:10 - [TEST_STEP][PASSED] - reportDir = getReportFolder(): null
+
+10-07-2025T19:34:10 - [TEST_STEP][PASSED] - reportDir = reportDir.replaceFirst("/Reports/", "/target/"): null
+
+10-07-2025T19:34:10 - [TEST_STEP][PASSED] - extensionDir = ConfigExtension.getExtensionFromSource(AGENT_EXTENSION_DIR, reportDir): null
+
+10-07-2025T19:34:10 - [TEST_STEP][PASSED] - ConfigExtension.setConfig(extensionDir, CLIENT_CODE, ENVIRONMENT_PREFIX, TRUETEST_HOSTS): null
+
+10-07-2025T19:34:10 - [TEST_STEP][PASSED] - playwrightManager = new com.katalon.automation.playwright.PlaywrightManager(): null
+
+10-07-2025T19:34:10 - [TEST_STEP][PASSED] - networkMonitor = new com.katalon.automation.playwright.NetworkTrafficMonitor(): null
+
+10-07-2025T19:34:10 - [TEST_STEP][PASSED] - playwrightManager.launchBrowserWithPersistentContext(false, extensionDir, true, reportDir): null
+
+10-07-2025T19:34:10 - [TEST_STEP][PASSED] - playwrightManager.newPage(): null
+
+10-07-2025T19:34:10 - [TEST_STEP][PASSED] - playwrightManager.startNetworkListener(networkMonitor.&captureRequest, networkMonitor.&captureResponse): null
+
+10-07-2025T19:34:10 - [TEST_STEP][PASSED] - playwrightManager.navigateTo("https://base-component.aut.katalon.com/input/radio-search-submit"): null
+
+10-07-2025T19:34:13 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:34:15 - [TEST_STEP][PASSED] - findSelector(findTestObject("Object Repository/Test AUT/Base Component/Radio Search Submit/Search Product Textbox"))).pressSequentially("Laptop"): null
+
+10-07-2025T19:34:17 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Radio Search Submit/Category Electronics"))): null
+
+10-07-2025T19:34:18 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Radio Search Submit/Search Product Button"))): null
+
+10-07-2025T19:34:20 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Radio Search Submit/Reset Filters"))): null
+
+10-07-2025T19:34:21 - [TEST_STEP][PASSED] - getPage().waitForTimeout(3000): null
+
+10-07-2025T19:34:24 - [TEST_STEP][PASSED] - trackingTraffic = networkMonitor.getRequestsByUrlPattern("KA-"): null
+
+10-07-2025T19:34:24 - [TEST_STEP][PASSED] - actionRequests = TrackingData.getRequestsWithAction(trackingTraffic): null
+
+10-07-2025T19:34:24 - [TEST_STEP][PASSED] - timestamps = TrackingData.getTimestamps(actionRequests): null
+
+10-07-2025T19:34:24 - [TEST_STEP][PASSED] - actions = TrackingData.extractValuesWithSortByTimestamp(actionRequests, "$.action"): null
+
+10-07-2025T19:34:24 - [TEST_STEP][PASSED] - TrackingData.printRequests(actionRequests): null
+
+10-07-2025T19:34:24 - [TEST_STEP][PASSED] - assert timestamps.size() == toSet().size() : "Each action should not have timestamp get duplicated": null
+
+10-07-2025T19:34:24 - [TEST_STEP][PASSED] - assert actions == ["view", "input", "click", "click", "submit", "click"]: null
+
+10-07-2025T19:34:24 - [TEST_STEP][PASSED] - networkMonitor = new com.katalon.automation.playwright.NetworkTrafficMonitor(): null
+
+10-07-2025T19:34:24 - [TEST_STEP][PASSED] - playwrightManager.startNetworkListener(networkMonitor.&captureRequest, networkMonitor.&captureResponse): null
+
+10-07-2025T19:34:24 - [TEST_STEP][PASSED] - findSelector(findTestObject("Object Repository/Test AUT/Base Component/Radio Search Submit/Search Product Textbox"))).pressSequentially("Laptop"): null
+
+10-07-2025T19:34:26 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Radio Search Submit/Category Electronics"))): null
+
+10-07-2025T19:34:27 - [TEST_STEP][PASSED] - keyboard().press("Enter"): null
+
+10-07-2025T19:34:29 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Radio Search Submit/Reset Filters"))): null
+
+10-07-2025T19:34:30 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:34:32 - [TEST_STEP][PASSED] - trackingTraffic = networkMonitor.getRequestsByUrlPattern("KA-"): null
+
+10-07-2025T19:34:32 - [TEST_STEP][PASSED] - actionRequests = TrackingData.getRequestsWithAction(trackingTraffic): null
+
+10-07-2025T19:34:32 - [TEST_STEP][PASSED] - timestamps = TrackingData.getTimestamps(actionRequests): null
+
+10-07-2025T19:34:32 - [TEST_STEP][PASSED] - actions = TrackingData.extractValuesWithSortByTimestamp(actionRequests, "$.action"): null
+
+10-07-2025T19:34:32 - [TEST_STEP][PASSED] - TrackingData.printRequests(actionRequests): null
+
+10-07-2025T19:34:32 - [TEST_STEP][PASSED] - assert timestamps.size() == toSet().size() : "Each action should not have timestamp get duplicated": null
+
+10-07-2025T19:34:32 - [TEST_STEP][PASSED] - playwrightManager.stopTracing($reportDir/trace.zip): null
+
+10-07-2025T19:34:33 - [TEST_STEP][PASSED] - playwrightManager.close(): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Traffic Agent/TC007 - Verify data tracking on element Input type Radio Search Submit (Autocomplete Search)" time="28.43" classname="Test Cases/Traffic Agent/TC007 - Verify data tracking on element Input type Radio Search Submit (Autocomplete Search)" status="PASSED">
+         <system-out><![CDATA[10-07-2025T19:34:33 - [TEST_CASE][PASSED] - Test Cases/Traffic Agent/TC007 - Verify data tracking on element Input type Radio Search Submit (Autocomplete Search): Test Cases/Traffic Agent/TC007 - Verify data tracking on element Input type Radio Search Submit (Autocomplete Search)
+
+10-07-2025T19:34:33 - [TEST_STEP][PASSED] - reportDir = getReportFolder(): null
+
+10-07-2025T19:34:33 - [TEST_STEP][PASSED] - reportDir = reportDir.replaceFirst("/Reports/", "/target/"): null
+
+10-07-2025T19:34:33 - [TEST_STEP][PASSED] - extensionDir = ConfigExtension.getExtensionFromSource(AGENT_EXTENSION_DIR, reportDir): null
+
+10-07-2025T19:34:33 - [TEST_STEP][PASSED] - ConfigExtension.setConfig(extensionDir, CLIENT_CODE, ENVIRONMENT_PREFIX, TRUETEST_HOSTS): null
+
+10-07-2025T19:34:33 - [TEST_STEP][PASSED] - playwrightManager = new com.katalon.automation.playwright.PlaywrightManager(): null
+
+10-07-2025T19:34:33 - [TEST_STEP][PASSED] - networkMonitor = new com.katalon.automation.playwright.NetworkTrafficMonitor(): null
+
+10-07-2025T19:34:33 - [TEST_STEP][PASSED] - playwrightManager.launchBrowserWithPersistentContext(false, extensionDir, true, reportDir): null
+
+10-07-2025T19:34:34 - [TEST_STEP][PASSED] - playwrightManager.newPage(): null
+
+10-07-2025T19:34:34 - [TEST_STEP][PASSED] - playwrightManager.startNetworkListener(networkMonitor.&captureRequest, networkMonitor.&captureResponse): null
+
+10-07-2025T19:34:34 - [TEST_STEP][PASSED] - playwrightManager.navigateTo("https://base-component.aut.katalon.com/input/radio-search-submit"): null
+
+10-07-2025T19:34:36 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:34:38 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Radio Search Submit/Mode Autocomplete Search"))): null
+
+10-07-2025T19:34:40 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Radio Search Submit/Category Electronics"))): null
+
+10-07-2025T19:34:41 - [TEST_STEP][PASSED] - findSelector(findTestObject("Object Repository/Test AUT/Base Component/Radio Search Submit/Search Product Textbox"))).pressSequentially("Laptop"): null
+
+10-07-2025T19:34:43 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Radio Search Submit/Search Product Search Suggestion", ["value":"Laptop Dock"]))): null
+
+10-07-2025T19:34:44 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Radio Search Submit/Search Product Button"))): null
+
+10-07-2025T19:34:46 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Radio Search Submit/Reset Filters"))): null
+
+10-07-2025T19:34:48 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:34:50 - [TEST_STEP][PASSED] - trackingTraffic = networkMonitor.getRequestsByUrlPattern("KA-"): null
+
+10-07-2025T19:34:50 - [TEST_STEP][PASSED] - actionRequests = TrackingData.getRequestsWithAction(trackingTraffic): null
+
+10-07-2025T19:34:50 - [TEST_STEP][PASSED] - timestamps = TrackingData.getTimestamps(actionRequests): null
+
+10-07-2025T19:34:50 - [TEST_STEP][PASSED] - actions = TrackingData.extractValuesWithSortByTimestamp(actionRequests, "$.action"): null
+
+10-07-2025T19:34:50 - [TEST_STEP][PASSED] - TrackingData.printRequests(actionRequests): null
+
+10-07-2025T19:34:50 - [TEST_STEP][PASSED] - assert timestamps.size() == toSet().size() : "Each action should not have timestamp get duplicated": null
+
+10-07-2025T19:34:50 - [TEST_STEP][PASSED] - assert actions == ["view", "click", "click", "input", "click", "click", "submit", "click"]: null
+
+10-07-2025T19:34:50 - [TEST_STEP][PASSED] - networkMonitor = new com.katalon.automation.playwright.NetworkTrafficMonitor(): null
+
+10-07-2025T19:34:50 - [TEST_STEP][PASSED] - playwrightManager.startNetworkListener(networkMonitor.&captureRequest, networkMonitor.&captureResponse): null
+
+10-07-2025T19:34:50 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Radio Search Submit/Mode Autocomplete Search"))): null
+
+10-07-2025T19:34:51 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Radio Search Submit/Category Electronics"))): null
+
+10-07-2025T19:34:53 - [TEST_STEP][PASSED] - findSelector(findTestObject("Object Repository/Test AUT/Base Component/Radio Search Submit/Search Product Textbox"))).pressSequentially("Laptop"): null
+
+10-07-2025T19:34:54 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Radio Search Submit/Search Product Search Suggestion", ["value":"Laptop Dock"]))): null
+
+10-07-2025T19:34:56 - [TEST_STEP][PASSED] - keyboard().press("Enter"): null
+
+10-07-2025T19:34:57 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Radio Search Submit/Reset Filters"))): null
+
+10-07-2025T19:34:59 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:35:01 - [TEST_STEP][PASSED] - trackingTraffic = networkMonitor.getRequestsByUrlPattern("KA-"): null
+
+10-07-2025T19:35:01 - [TEST_STEP][PASSED] - actionRequests = TrackingData.getRequestsWithAction(trackingTraffic): null
+
+10-07-2025T19:35:01 - [TEST_STEP][PASSED] - timestamps = TrackingData.getTimestamps(actionRequests): null
+
+10-07-2025T19:35:01 - [TEST_STEP][PASSED] - actions = TrackingData.extractValuesWithSortByTimestamp(actionRequests, "$.action"): null
+
+10-07-2025T19:35:01 - [TEST_STEP][PASSED] - TrackingData.printRequests(actionRequests): null
+
+10-07-2025T19:35:01 - [TEST_STEP][PASSED] - assert timestamps.size() == toSet().size() : "Each action should not have timestamp get duplicated": null
+
+10-07-2025T19:35:01 - [TEST_STEP][PASSED] - playwrightManager.stopTracing($reportDir/trace.zip): null
+
+10-07-2025T19:35:01 - [TEST_STEP][PASSED] - playwrightManager.close(): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Traffic Agent/TC008 - Verify data tracking on element Input in Form (Click and Input)" time="47.679" classname="Test Cases/Traffic Agent/TC008 - Verify data tracking on element Input in Form (Click and Input)" status="PASSED">
+         <system-out><![CDATA[10-07-2025T19:35:01 - [TEST_CASE][PASSED] - Test Cases/Traffic Agent/TC008 - Verify data tracking on element Input in Form (Click and Input): Test Cases/Traffic Agent/TC008 - Verify data tracking on element Input in Form (Click and Input)
+
+10-07-2025T19:35:01 - [TEST_STEP][PASSED] - reportDir = getReportFolder(): null
+
+10-07-2025T19:35:01 - [TEST_STEP][PASSED] - reportDir = reportDir.replaceFirst("/Reports/", "/target/"): null
+
+10-07-2025T19:35:01 - [TEST_STEP][PASSED] - extensionDir = ConfigExtension.getExtensionFromSource(AGENT_EXTENSION_DIR, reportDir): null
+
+10-07-2025T19:35:01 - [TEST_STEP][PASSED] - ConfigExtension.setConfig(extensionDir, CLIENT_CODE, ENVIRONMENT_PREFIX, TRUETEST_HOSTS): null
+
+10-07-2025T19:35:01 - [TEST_STEP][PASSED] - playwrightManager = new com.katalon.automation.playwright.PlaywrightManager(): null
+
+10-07-2025T19:35:01 - [TEST_STEP][PASSED] - networkMonitor = new com.katalon.automation.playwright.NetworkTrafficMonitor(): null
+
+10-07-2025T19:35:01 - [TEST_STEP][PASSED] - playwrightManager.launchBrowserWithPersistentContext(false, extensionDir, true, reportDir): null
+
+10-07-2025T19:35:02 - [TEST_STEP][PASSED] - playwrightManager.newPage(): null
+
+10-07-2025T19:35:02 - [TEST_STEP][PASSED] - playwrightManager.startNetworkListener(networkMonitor.&captureRequest, networkMonitor.&captureResponse): null
+
+10-07-2025T19:35:02 - [TEST_STEP][PASSED] - playwrightManager.navigateTo("https://base-component.aut.katalon.com/input/form-inputs"): null
+
+10-07-2025T19:35:06 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:35:08 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Email"))): null
+
+10-07-2025T19:35:09 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Email")), "hello@katalon.com"): null
+
+10-07-2025T19:35:11 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/US Social Security Number"))): null
+
+10-07-2025T19:35:12 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/US Social Security Number")), "123-45-6789"): null
+
+10-07-2025T19:35:14 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Phone Number"))): null
+
+10-07-2025T19:35:15 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Phone Number")), "+1 2013692667"): null
+
+10-07-2025T19:35:17 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Zip Code"))): null
+
+10-07-2025T19:35:18 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Zip Code")), "92704"): null
+
+10-07-2025T19:35:20 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/LinkedIn Profile URL"))): null
+
+10-07-2025T19:35:22 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/LinkedIn Profile URL")), "https://www.linkedin.com/in/katalon"): null
+
+10-07-2025T19:35:23 - [TEST_STEP][PASSED] - findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Select Gender"))).selectOption("Male"): null
+
+10-07-2025T19:35:25 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/IPv4 Address"))): null
+
+10-07-2025T19:35:26 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/IPv4 Address")), "192.168.96.4"): null
+
+10-07-2025T19:35:28 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/IPv6 Address"))): null
+
+10-07-2025T19:35:29 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/IPv6 Address")), "5916:3bd9:65fb:296a:e893:4f9b:deeb:b484"): null
+
+10-07-2025T19:35:31 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Change Password Checkbox"))): null
+
+10-07-2025T19:35:32 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/New Password"))): null
+
+10-07-2025T19:35:34 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/New Password")), "Hello World@123#$%"): null
+
+10-07-2025T19:35:35 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Confirm New Password"))): null
+
+10-07-2025T19:35:37 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Confirm New Password")), "Hello World@123#$%"): null
+
+10-07-2025T19:35:38 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Credit Card Number"))): null
+
+10-07-2025T19:35:40 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Credit Card Number")), "4916450019477019"): null
+
+10-07-2025T19:35:42 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Verify Human"))): null
+
+10-07-2025T19:35:43 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Submit Form"))): null
+
+10-07-2025T19:35:45 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Back To Home"))): null
+
+10-07-2025T19:35:46 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:35:48 - [TEST_STEP][PASSED] - trackingTraffic = networkMonitor.getRequestsByUrlPattern("KA-"): null
+
+10-07-2025T19:35:48 - [TEST_STEP][PASSED] - actionRequests = TrackingData.getRequestsWithAction(trackingTraffic): null
+
+10-07-2025T19:35:48 - [TEST_STEP][PASSED] - timestamps = TrackingData.getTimestamps(actionRequests): null
+
+10-07-2025T19:35:48 - [TEST_STEP][PASSED] - actions = TrackingData.extractValuesWithSortByTimestamp(actionRequests, "$.action"): null
+
+10-07-2025T19:35:48 - [TEST_STEP][PASSED] - TrackingData.printRequests(actionRequests): null
+
+10-07-2025T19:35:48 - [TEST_STEP][PASSED] - assert timestamps.size() == toSet().size(): null
+
+10-07-2025T19:35:48 - [TEST_STEP][PASSED] - assert actions == ["view", "click", "input", "click", "input", "click", "input", "click", "input", "click", "input", "select", "click", "input", "click", "input", "click", "click", "input", "click", "input", "click", "input", "click", "click", "submit", "click", "view"]: null
+
+10-07-2025T19:35:48 - [TEST_STEP][PASSED] - playwrightManager.stopTracing($reportDir/trace.zip): null
+
+10-07-2025T19:35:49 - [TEST_STEP][PASSED] - playwrightManager.close(): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Traffic Agent/TC009 - Verify data tracking on element Input in Form (Input and Press Tab)" time="46.743" classname="Test Cases/Traffic Agent/TC009 - Verify data tracking on element Input in Form (Input and Press Tab)" status="FAILED">
+         <failure type="FAILED" message="Test Cases/Traffic Agent/TC009 - Verify data tracking on element Input in Form (Input and Press Tab) FAILED.&#xa;Reason:&#xa;java.lang.AssertionError: Detect duplicated timestamp in list [1752150951843, 1752150955284, 1752150958337, 1752150956820, 1752150961380, 1752150959865, 1752150964421, 1752150962911, 1752150967466, 1752150965952, 1752150970516, 1752150972030, 1752150968993, 1752150975076, 1752150973559, 1752150976606, 1752150978150, 1752150979667, 1752150982714, 1752150981198, 1752150985756, 1752150984243, 1752150987289, 1752150988868, 1752150990434, 1752150990432, 1752150991984, 1752150991984, 1752150992972]. Expression: (timestamps.size() == timestamps.toSet().size())&#xa;	at TC009 - Verify data tracking on element Input in Form (Input and Press Tab).run(TC009 - Verify data tracking on element Input in Form (Input and Press Tab):81)&#xa;	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xa;	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:485)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:476)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:455)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:447)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:321)&#xa;	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:160)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:107)&#xa;	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:195)&#xa;	at TempTestSuite1752150747624.run(TempTestSuite1752150747624.groovy:35)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#xa;	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xa;"/>
+         <system-out><![CDATA[10-07-2025T19:35:49 - [TEST_CASE][FAILED] - Test Cases/Traffic Agent/TC009 - Verify data tracking on element Input in Form (Input and Press Tab): Test Cases/Traffic Agent/TC009 - Verify data tracking on element Input in Form (Input and Press Tab) FAILED.
+Reason:
+java.lang.AssertionError: Detect duplicated timestamp in list [1752150951843, 1752150955284, 1752150958337, 1752150956820, 1752150961380, 1752150959865, 1752150964421, 1752150962911, 1752150967466, 1752150965952, 1752150970516, 1752150972030, 1752150968993, 1752150975076, 1752150973559, 1752150976606, 1752150978150, 1752150979667, 1752150982714, 1752150981198, 1752150985756, 1752150984243, 1752150987289, 1752150988868, 1752150990434, 1752150990432, 1752150991984, 1752150991984, 1752150992972]. Expression: (timestamps.size() == timestamps.toSet().size())
+	at TC009 - Verify data tracking on element Input in Form (Input and Press Tab).run(TC009 - Verify data tracking on element Input in Form (Input and Press Tab):81)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:485)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:476)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:455)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:447)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:321)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:160)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:107)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:195)
+	at TempTestSuite1752150747624.run(TempTestSuite1752150747624.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+10-07-2025T19:35:49 - [TEST_STEP][PASSED] - reportDir = getReportFolder(): null
+
+10-07-2025T19:35:49 - [TEST_STEP][PASSED] - reportDir = reportDir.replaceFirst("/Reports/", "/target/"): null
+
+10-07-2025T19:35:49 - [TEST_STEP][PASSED] - extensionDir = ConfigExtension.getExtensionFromSource(AGENT_EXTENSION_DIR, reportDir): null
+
+10-07-2025T19:35:49 - [TEST_STEP][PASSED] - ConfigExtension.setConfig(extensionDir, CLIENT_CODE, ENVIRONMENT_PREFIX, TRUETEST_HOSTS): null
+
+10-07-2025T19:35:49 - [TEST_STEP][PASSED] - playwrightManager = new com.katalon.automation.playwright.PlaywrightManager(): null
+
+10-07-2025T19:35:49 - [TEST_STEP][PASSED] - networkMonitor = new com.katalon.automation.playwright.NetworkTrafficMonitor(): null
+
+10-07-2025T19:35:49 - [TEST_STEP][PASSED] - playwrightManager.launchBrowserWithPersistentContext(false, extensionDir, true, reportDir): null
+
+10-07-2025T19:35:50 - [TEST_STEP][PASSED] - playwrightManager.newPage(): null
+
+10-07-2025T19:35:50 - [TEST_STEP][PASSED] - playwrightManager.startNetworkListener(networkMonitor.&captureRequest, networkMonitor.&captureResponse): null
+
+10-07-2025T19:35:50 - [TEST_STEP][PASSED] - playwrightManager.navigateTo("https://base-component.aut.katalon.com/input/form-inputs"): null
+
+10-07-2025T19:35:53 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:35:55 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Email"))): null
+
+10-07-2025T19:35:56 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Email")), "hello@katalon.com"): null
+
+10-07-2025T19:35:58 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:35:59 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/US Social Security Number")), "123-45-6789"): null
+
+10-07-2025T19:36:01 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:36:02 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Phone Number")), "+1 2013692667"): null
+
+10-07-2025T19:36:04 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:36:05 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Zip Code")), "92704"): null
+
+10-07-2025T19:36:07 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:36:08 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/LinkedIn Profile URL")), "https://www.linkedin.com/in/katalon"): null
+
+10-07-2025T19:36:10 - [TEST_STEP][PASSED] - findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Select Gender"))).selectOption("Male"): null
+
+10-07-2025T19:36:12 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:36:13 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/IPv4 Address")), "192.168.96.4"): null
+
+10-07-2025T19:36:15 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:36:16 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/IPv6 Address")), "5916:3bd9:65fb:296a:e893:4f9b:deeb:b484"): null
+
+10-07-2025T19:36:18 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Change Password Checkbox"))): null
+
+10-07-2025T19:36:19 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:36:21 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/New Password")), "Hello World@123#$%"): null
+
+10-07-2025T19:36:22 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:36:24 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Confirm New Password")), "Hello World@123#$%"): null
+
+10-07-2025T19:36:25 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:36:27 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Credit Card Number")), "4916450019477019"): null
+
+10-07-2025T19:36:28 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Verify Human"))): null
+
+10-07-2025T19:36:30 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Submit Form"))): null
+
+10-07-2025T19:36:31 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Back To Home"))): null
+
+10-07-2025T19:36:33 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:36:35 - [TEST_STEP][PASSED] - trackingTraffic = networkMonitor.getRequestsByUrlPattern("KA-"): null
+
+10-07-2025T19:36:36 - [TEST_STEP][PASSED] - actionRequests = TrackingData.getRequestsWithAction(trackingTraffic): null
+
+10-07-2025T19:36:36 - [TEST_STEP][PASSED] - timestamps = TrackingData.getTimestamps(actionRequests): null
+
+10-07-2025T19:36:36 - [TEST_STEP][PASSED] - actions = TrackingData.extractValuesWithSortByTimestamp(actionRequests, "$.action"): null
+
+10-07-2025T19:36:36 - [TEST_STEP][PASSED] - TrackingData.printRequests(actionRequests): null
+
+10-07-2025T19:36:36 - [TEST_STEP][FAILED] - assert timestamps.size() == toSet().size(): Test Cases/Traffic Agent/TC009 - Verify data tracking on element Input in Form (Input and Press Tab) FAILED.
+Reason:
+java.lang.AssertionError: Detect duplicated timestamp in list [1752150951843, 1752150955284, 1752150958337, 1752150956820, 1752150961380, 1752150959865, 1752150964421, 1752150962911, 1752150967466, 1752150965952, 1752150970516, 1752150972030, 1752150968993, 1752150975076, 1752150973559, 1752150976606, 1752150978150, 1752150979667, 1752150982714, 1752150981198, 1752150985756, 1752150984243, 1752150987289, 1752150988868, 1752150990434, 1752150990432, 1752150991984, 1752150991984, 1752150992972]. Expression: (timestamps.size() == timestamps.toSet().size())
+	at TC009 - Verify data tracking on element Input in Form (Input and Press Tab).run(TC009 - Verify data tracking on element Input in Form (Input and Press Tab):81)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:485)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:476)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:455)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:447)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:321)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:160)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:107)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:195)
+	at TempTestSuite1752150747624.run(TempTestSuite1752150747624.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+10-07-2025T19:36:36 - [MESSAGE][FAILED] - Test Cases/Traffic Agent/TC009 - Verify data tracking on element Input in Form (Input and Press Tab) FAILED.
+Reason:
+java.lang.AssertionError: Detect duplicated timestamp in list [1752150951843, 1752150955284, 1752150958337, 1752150956820, 1752150961380, 1752150959865, 1752150964421, 1752150962911, 1752150967466, 1752150965952, 1752150970516, 1752150972030, 1752150968993, 1752150975076, 1752150973559, 1752150976606, 1752150978150, 1752150979667, 1752150982714, 1752150981198, 1752150985756, 1752150984243, 1752150987289, 1752150988868, 1752150990434, 1752150990432, 1752150991984, 1752150991984, 1752150992972]. Expression: (timestamps.size() == timestamps.toSet().size())
+	at TC009 - Verify data tracking on element Input in Form (Input and Press Tab).run(TC009 - Verify data tracking on element Input in Form (Input and Press Tab):81)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:485)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:476)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:455)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:447)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:321)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:160)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:107)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:195)
+	at TempTestSuite1752150747624.run(TempTestSuite1752150747624.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-out>
+         <system-err><![CDATA[10-07-2025T19:35:49 - [TEST_CASE][FAILED] - Test Cases/Traffic Agent/TC009 - Verify data tracking on element Input in Form (Input and Press Tab): Test Cases/Traffic Agent/TC009 - Verify data tracking on element Input in Form (Input and Press Tab) FAILED.
+Reason:
+java.lang.AssertionError: Detect duplicated timestamp in list [1752150951843, 1752150955284, 1752150958337, 1752150956820, 1752150961380, 1752150959865, 1752150964421, 1752150962911, 1752150967466, 1752150965952, 1752150970516, 1752150972030, 1752150968993, 1752150975076, 1752150973559, 1752150976606, 1752150978150, 1752150979667, 1752150982714, 1752150981198, 1752150985756, 1752150984243, 1752150987289, 1752150988868, 1752150990434, 1752150990432, 1752150991984, 1752150991984, 1752150992972]. Expression: (timestamps.size() == timestamps.toSet().size())
+	at TC009 - Verify data tracking on element Input in Form (Input and Press Tab).run(TC009 - Verify data tracking on element Input in Form (Input and Press Tab):81)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:485)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:476)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:455)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:447)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:321)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:160)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:107)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:195)
+	at TempTestSuite1752150747624.run(TempTestSuite1752150747624.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-err>
+      </testcase>
+      <system-out><![CDATA[10-07-2025T19:32:30 - [TEST_SUITE][FAILED] - Verify Data Tracking On Support Elements: null]]></system-out>
+      <system-err><![CDATA[10-07-2025T19:32:30 - [TEST_SUITE][FAILED] - Verify Data Tracking On Support Elements: null]]></system-err>
+   </testsuite>
+</testsuites>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mock Suite" time="12.000" tests="7" failures="1" errors="2" skipped="0">
+  <testsuite name="Mock Suite" tests="7" failures="1" errors="2" skipped="0" time="12.000" timestamp="2025-07-10T14:00:00.000Z">
+    <testcase classname="mock.MockTest" name="testPass" time="1.000"/>
+    <testcase classname="mock.MockTest" name="testFail" time="2.000"/>
+    <testcase classname="mock.MockTest" name="testError" time="3.000"/>
+    <testcase classname="mock.MockTest" name="testSkip" time="0.000"/>
+    <testcase classname="mock.MockTest" name="testNewFail" time="4.000"/>
+    <testcase classname="mock.MockTest" name="testPersistentFail" time="5.000">
+      <failure type="AssertionError" message="This test always fails">Stacktrace here</failure>
+    </testcase>
+    <testcase classname="mock.MockTest" name="testPersistentError" time="6.000">
+      <error type="RuntimeException" message="This test always errors">Stacktrace here</error>
+    </testcase>
+  </testsuite>
+</testsuites> 

@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Verify Data Tracking On Support Elements" time="64.117" tests="2" failures="1" errors="0">
+   <testsuite name="Verify Data Tracking On Support Elements" tests="2" failures="1" errors="0" time="64.117" skipped="0" timestamp="2025-07-10T12:36:40.911Z" hostname="viet.dnguyen - localhost" id="Test Suites/Traffic Agent/Verify Data Tracking On Support Elements">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="/Users/viet.dnguyen/katalon/kqe-truetest-automation/Reports/20250710_193226/Traffic Agent/Verify Data Tracking On Support Elements/20250710_193637"/>
+         <property name="logFiles" value="/Users/viet.dnguyen/katalon/kqe-truetest-automation/Reports/20250710_193226/Traffic Agent/Verify Data Tracking On Support Elements/20250710_193637/execution0.log, /Users/viet.dnguyen/katalon/kqe-truetest-automation/Reports/20250710_193226/Traffic Agent/Verify Data Tracking On Support Elements/20250710_193637/console0.log"/>
+         <property name="attachments" value=""/>
+         <property name="userFullName" value="Viet Nguyen"/>
+         <property name="hostName" value="viet.dnguyen - localhost"/>
+         <property name="hostAddress" value="127.0.0.1"/>
+         <property name="projectName" value="kqe-truetest-automation"/>
+         <property name="os" value="Mac OS X 64bit"/>
+         <property name="katalonVersion" value="10.2.3.0"/>
+      </properties>
+      <testcase name="Test Cases/Traffic Agent/TC001 - Verify data tracking on element Input_Checkbox" time="17.024" classname="Test Cases/Traffic Agent/TC001 - Verify data tracking on element Input_Checkbox" status="PASSED">
+         <system-out><![CDATA[10-07-2025T19:36:41 - [TEST_CASE][PASSED] - Test Cases/Traffic Agent/TC001 - Verify data tracking on element Input_Checkbox: Test Cases/Traffic Agent/TC001 - Verify data tracking on element Input_Checkbox
+
+10-07-2025T19:36:41 - [TEST_STEP][PASSED] - reportDir = getReportFolder(): null
+
+10-07-2025T19:36:41 - [TEST_STEP][PASSED] - reportDir = reportDir.replaceFirst("/Reports/", "/target/"): null
+
+10-07-2025T19:36:41 - [TEST_STEP][PASSED] - extensionDir = ConfigExtension.getExtensionFromSource(AGENT_EXTENSION_DIR, reportDir): null
+
+10-07-2025T19:36:41 - [TEST_STEP][PASSED] - ConfigExtension.setConfig(extensionDir, CLIENT_CODE, ENVIRONMENT_PREFIX, TRUETEST_HOSTS): null
+
+10-07-2025T19:36:41 - [TEST_STEP][PASSED] - playwrightManager = new com.katalon.automation.playwright.PlaywrightManager(): null
+
+10-07-2025T19:36:43 - [TEST_STEP][PASSED] - networkMonitor = new com.katalon.automation.playwright.NetworkTrafficMonitor(): null
+
+10-07-2025T19:36:43 - [TEST_STEP][PASSED] - playwrightManager.launchBrowserWithPersistentContext(false, extensionDir, true, reportDir): null
+
+10-07-2025T19:36:44 - [TEST_STEP][PASSED] - playwrightManager.newPage(): null
+
+10-07-2025T19:36:44 - [TEST_STEP][PASSED] - playwrightManager.startNetworkListener(networkMonitor.&captureRequest, networkMonitor.&captureResponse): null
+
+10-07-2025T19:36:44 - [TEST_STEP][PASSED] - playwrightManager.navigateTo("https://base-component.aut.katalon.com/input/checkbox"): null
+
+10-07-2025T19:36:47 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:36:49 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Input/Checkbox/Preferences/Receive newsletter"))): null
+
+10-07-2025T19:36:51 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Input/Checkbox/Preferences/Enable notifications"))): null
+
+10-07-2025T19:36:52 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Input/Checkbox/Preferences/Accept terms and conditions"))): null
+
+10-07-2025T19:36:54 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Input/Checkbox/Preferences/Show Selection"))): null
+
+10-07-2025T19:36:55 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:36:57 - [TEST_STEP][PASSED] - playwrightManager.stopTracing($reportDir/trace.zip): null
+
+10-07-2025T19:36:57 - [TEST_STEP][PASSED] - playwrightManager.close(): null
+
+10-07-2025T19:36:57 - [TEST_STEP][PASSED] - trackingTraffic = networkMonitor.getRequestsByUrlPattern("KA-"): null
+
+10-07-2025T19:36:58 - [TEST_STEP][PASSED] - trackingConfigRequest = json").get(0): null
+
+10-07-2025T19:36:58 - [TEST_STEP][PASSED] - actionRequests = TrackingData.getRequestsWithAction(trackingTraffic): null
+
+10-07-2025T19:36:58 - [TEST_STEP][PASSED] - timestamps = TrackingData.getTimestamps(actionRequests): null
+
+10-07-2025T19:36:58 - [TEST_STEP][PASSED] - assert timestamps.size() == toSet().size() : "Each action should not have timestamp get duplicated": null
+
+10-07-2025T19:36:58 - [TEST_STEP][PASSED] - clickRequests = TrackingData.getRequestsByAction(trackingTraffic, "click"): null
+
+10-07-2025T19:36:58 - [TEST_STEP][PASSED] - assert clickRequests.size() == 4: null
+
+10-07-2025T19:36:58 - [TEST_STEP][PASSED] - TrackingData.printRequests(clickRequests): null
+
+10-07-2025T19:36:58 - [TEST_STEP][PASSED] - trackingConfig = TrackingConfig.fromJson(trackingConfigRequest.getResponseBody()): null
+
+10-07-2025T19:36:58 - [TEST_STEP][PASSED] - out.println("Tracking Config: " + context_enabled): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <testcase name="Test Cases/Traffic Agent/TC009 - Verify data tracking on element Input in Form (Input and Press Tab)" time="46.929" classname="Test Cases/Traffic Agent/TC009 - Verify data tracking on element Input in Form (Input and Press Tab)" status="FAILED">
+         <failure type="FAILED" message="Test Cases/Traffic Agent/TC009 - Verify data tracking on element Input in Form (Input and Press Tab) FAILED.&#xa;Reason:&#xa;java.lang.AssertionError: Detect duplicated timestamp in list [1752151020849, 1752151024360, 1752151027473, 1752151025928, 1752151030524, 1752151029012, 1752151033572, 1752151032055, 1752151036628, 1752151035112, 1752151039696, 1752151041214, 1752151038164, 1752151044288, 1752151042772, 1752151047411, 1752151045819, 1752151048942, 1752151051995, 1752151050471, 1752151055040, 1752151053523, 1752151058134, 1752151056583, 1752151059701, 1752151059700, 1752151061250, 1752151061250, 1752151062215]. Expression: (timestamps.size() == timestamps.toSet().size())&#xa;	at TC009 - Verify data tracking on element Input in Form (Input and Press Tab).run(TC009 - Verify data tracking on element Input in Form (Input and Press Tab):81)&#xa;	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)&#xa;	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:485)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:476)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:455)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:447)&#xa;	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:321)&#xa;	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:160)&#xa;	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:107)&#xa;	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:195)&#xa;	at TempTestSuite1752150997485.run(TempTestSuite1752150997485.groovy:35)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)&#xa;	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)&#xa;	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)&#xa;"/>
+         <system-out><![CDATA[10-07-2025T19:36:58 - [TEST_CASE][FAILED] - Test Cases/Traffic Agent/TC009 - Verify data tracking on element Input in Form (Input and Press Tab): Test Cases/Traffic Agent/TC009 - Verify data tracking on element Input in Form (Input and Press Tab) FAILED.
+Reason:
+java.lang.AssertionError: Detect duplicated timestamp in list [1752151020849, 1752151024360, 1752151027473, 1752151025928, 1752151030524, 1752151029012, 1752151033572, 1752151032055, 1752151036628, 1752151035112, 1752151039696, 1752151041214, 1752151038164, 1752151044288, 1752151042772, 1752151047411, 1752151045819, 1752151048942, 1752151051995, 1752151050471, 1752151055040, 1752151053523, 1752151058134, 1752151056583, 1752151059701, 1752151059700, 1752151061250, 1752151061250, 1752151062215]. Expression: (timestamps.size() == timestamps.toSet().size())
+	at TC009 - Verify data tracking on element Input in Form (Input and Press Tab).run(TC009 - Verify data tracking on element Input in Form (Input and Press Tab):81)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:485)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:476)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:455)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:447)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:321)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:160)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:107)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:195)
+	at TempTestSuite1752150997485.run(TempTestSuite1752150997485.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+10-07-2025T19:36:58 - [TEST_STEP][PASSED] - reportDir = getReportFolder(): null
+
+10-07-2025T19:36:58 - [TEST_STEP][PASSED] - reportDir = reportDir.replaceFirst("/Reports/", "/target/"): null
+
+10-07-2025T19:36:58 - [TEST_STEP][PASSED] - extensionDir = ConfigExtension.getExtensionFromSource(AGENT_EXTENSION_DIR, reportDir): null
+
+10-07-2025T19:36:58 - [TEST_STEP][PASSED] - ConfigExtension.setConfig(extensionDir, CLIENT_CODE, ENVIRONMENT_PREFIX, TRUETEST_HOSTS): null
+
+10-07-2025T19:36:58 - [TEST_STEP][PASSED] - playwrightManager = new com.katalon.automation.playwright.PlaywrightManager(): null
+
+10-07-2025T19:36:58 - [TEST_STEP][PASSED] - networkMonitor = new com.katalon.automation.playwright.NetworkTrafficMonitor(): null
+
+10-07-2025T19:36:58 - [TEST_STEP][PASSED] - playwrightManager.launchBrowserWithPersistentContext(false, extensionDir, true, reportDir): null
+
+10-07-2025T19:36:59 - [TEST_STEP][PASSED] - playwrightManager.newPage(): null
+
+10-07-2025T19:36:59 - [TEST_STEP][PASSED] - playwrightManager.startNetworkListener(networkMonitor.&captureRequest, networkMonitor.&captureResponse): null
+
+10-07-2025T19:36:59 - [TEST_STEP][PASSED] - playwrightManager.navigateTo("https://base-component.aut.katalon.com/input/form-inputs"): null
+
+10-07-2025T19:37:02 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:37:04 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Email"))): null
+
+10-07-2025T19:37:05 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Email")), "hello@katalon.com"): null
+
+10-07-2025T19:37:07 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:37:08 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/US Social Security Number")), "123-45-6789"): null
+
+10-07-2025T19:37:10 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:37:12 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Phone Number")), "+1 2013692667"): null
+
+10-07-2025T19:37:13 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:37:15 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Zip Code")), "92704"): null
+
+10-07-2025T19:37:16 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:37:18 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/LinkedIn Profile URL")), "https://www.linkedin.com/in/katalon"): null
+
+10-07-2025T19:37:19 - [TEST_STEP][PASSED] - findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Select Gender"))).selectOption("Male"): null
+
+10-07-2025T19:37:21 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:37:22 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/IPv4 Address")), "192.168.96.4"): null
+
+10-07-2025T19:37:24 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:37:25 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/IPv6 Address")), "5916:3bd9:65fb:296a:e893:4f9b:deeb:b484"): null
+
+10-07-2025T19:37:27 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Change Password Checkbox"))): null
+
+10-07-2025T19:37:28 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:37:30 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/New Password")), "Hello World@123#$%"): null
+
+10-07-2025T19:37:31 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:37:33 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Confirm New Password")), "Hello World@123#$%"): null
+
+10-07-2025T19:37:35 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:37:36 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Credit Card Number")), "4916450019477019"): null
+
+10-07-2025T19:37:38 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Verify Human"))): null
+
+10-07-2025T19:37:39 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Submit Form"))): null
+
+10-07-2025T19:37:41 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Back To Home"))): null
+
+10-07-2025T19:37:42 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:37:44 - [TEST_STEP][PASSED] - trackingTraffic = networkMonitor.getRequestsByUrlPattern("KA-"): null
+
+10-07-2025T19:37:44 - [TEST_STEP][PASSED] - actionRequests = TrackingData.getRequestsWithAction(trackingTraffic): null
+
+10-07-2025T19:37:44 - [TEST_STEP][PASSED] - timestamps = TrackingData.getTimestamps(actionRequests): null
+
+10-07-2025T19:37:44 - [TEST_STEP][PASSED] - actions = TrackingData.extractValuesWithSortByTimestamp(actionRequests, "$.action"): null
+
+10-07-2025T19:37:45 - [TEST_STEP][PASSED] - TrackingData.printRequests(actionRequests): null
+
+10-07-2025T19:37:45 - [TEST_STEP][FAILED] - assert timestamps.size() == toSet().size(): Test Cases/Traffic Agent/TC009 - Verify data tracking on element Input in Form (Input and Press Tab) FAILED.
+Reason:
+java.lang.AssertionError: Detect duplicated timestamp in list [1752151020849, 1752151024360, 1752151027473, 1752151025928, 1752151030524, 1752151029012, 1752151033572, 1752151032055, 1752151036628, 1752151035112, 1752151039696, 1752151041214, 1752151038164, 1752151044288, 1752151042772, 1752151047411, 1752151045819, 1752151048942, 1752151051995, 1752151050471, 1752151055040, 1752151053523, 1752151058134, 1752151056583, 1752151059701, 1752151059700, 1752151061250, 1752151061250, 1752151062215]. Expression: (timestamps.size() == timestamps.toSet().size())
+	at TC009 - Verify data tracking on element Input in Form (Input and Press Tab).run(TC009 - Verify data tracking on element Input in Form (Input and Press Tab):81)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:485)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:476)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:455)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:447)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:321)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:160)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:107)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:195)
+	at TempTestSuite1752150997485.run(TempTestSuite1752150997485.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+
+
+10-07-2025T19:37:45 - [MESSAGE][FAILED] - Test Cases/Traffic Agent/TC009 - Verify data tracking on element Input in Form (Input and Press Tab) FAILED.
+Reason:
+java.lang.AssertionError: Detect duplicated timestamp in list [1752151020849, 1752151024360, 1752151027473, 1752151025928, 1752151030524, 1752151029012, 1752151033572, 1752151032055, 1752151036628, 1752151035112, 1752151039696, 1752151041214, 1752151038164, 1752151044288, 1752151042772, 1752151047411, 1752151045819, 1752151048942, 1752151051995, 1752151050471, 1752151055040, 1752151053523, 1752151058134, 1752151056583, 1752151059701, 1752151059700, 1752151061250, 1752151061250, 1752151062215]. Expression: (timestamps.size() == timestamps.toSet().size())
+	at TC009 - Verify data tracking on element Input in Form (Input and Press Tab).run(TC009 - Verify data tracking on element Input in Form (Input and Press Tab):81)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:485)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:476)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:455)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:447)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:321)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:160)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:107)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:195)
+	at TempTestSuite1752150997485.run(TempTestSuite1752150997485.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-out>
+         <system-err><![CDATA[10-07-2025T19:36:58 - [TEST_CASE][FAILED] - Test Cases/Traffic Agent/TC009 - Verify data tracking on element Input in Form (Input and Press Tab): Test Cases/Traffic Agent/TC009 - Verify data tracking on element Input in Form (Input and Press Tab) FAILED.
+Reason:
+java.lang.AssertionError: Detect duplicated timestamp in list [1752151020849, 1752151024360, 1752151027473, 1752151025928, 1752151030524, 1752151029012, 1752151033572, 1752151032055, 1752151036628, 1752151035112, 1752151039696, 1752151041214, 1752151038164, 1752151044288, 1752151042772, 1752151047411, 1752151045819, 1752151048942, 1752151051995, 1752151050471, 1752151055040, 1752151053523, 1752151058134, 1752151056583, 1752151059701, 1752151059700, 1752151061250, 1752151061250, 1752151062215]. Expression: (timestamps.size() == timestamps.toSet().size())
+	at TC009 - Verify data tracking on element Input in Form (Input and Press Tab).run(TC009 - Verify data tracking on element Input in Form (Input and Press Tab):81)
+	at com.kms.katalon.core.main.ScriptEngine.run(ScriptEngine.java:194)
+	at com.kms.katalon.core.main.ScriptEngine.runScriptAsRawText(ScriptEngine.java:119)
+	at com.kms.katalon.core.main.TestCaseExecutor.runScript(TestCaseExecutor.java:485)
+	at com.kms.katalon.core.main.TestCaseExecutor.doExecute(TestCaseExecutor.java:476)
+	at com.kms.katalon.core.main.TestCaseExecutor.processExecutionPhase(TestCaseExecutor.java:455)
+	at com.kms.katalon.core.main.TestCaseExecutor.accessMainPhase(TestCaseExecutor.java:447)
+	at com.kms.katalon.core.main.TestCaseExecutor.execute(TestCaseExecutor.java:321)
+	at com.kms.katalon.core.common.CommonExecutor.accessTestCaseMainPhase(CommonExecutor.java:71)
+	at com.kms.katalon.core.main.TestSuiteExecutor.accessTestSuiteMainPhase(TestSuiteExecutor.java:160)
+	at com.kms.katalon.core.main.TestSuiteExecutor.execute(TestSuiteExecutor.java:107)
+	at com.kms.katalon.core.main.TestCaseMain.startTestSuite(TestCaseMain.java:195)
+	at TempTestSuite1752150997485.run(TempTestSuite1752150997485.groovy:35)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)]]></system-err>
+      </testcase>
+      <system-out><![CDATA[10-07-2025T19:36:40 - [TEST_SUITE][FAILED] - Verify Data Tracking On Support Elements: null]]></system-out>
+      <system-err><![CDATA[10-07-2025T19:36:40 - [TEST_SUITE][FAILED] - Verify Data Tracking On Support Elements: null]]></system-err>
+   </testsuite>
+</testsuites>
