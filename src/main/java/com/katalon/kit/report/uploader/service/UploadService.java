@@ -44,6 +44,9 @@ public class UploadService {
     @Autowired
     private ApplicationProperties applicationProperties;
 
+    @Autowired
+    private JUnitXmlMergerService jUnitXmlMergerService;
+
     private String path;
 
     private String email;
@@ -148,5 +151,15 @@ public class UploadService {
         logData.put("batch", batch);
         logData.put("files", files.stream().map(Path::toAbsolutePath).collect(toList()));
         fileHelper.saveUploadInfo(logData, uploadInfoFilePath);
+    }
+
+    /**
+     * Merges JUnit XML files in the specified directory and its subdirectories
+     * 
+     * @param directoryPath The path to the directory containing JUnit XML files
+     * @return Path to the merged XML file, or null if no files were found or error occurred
+     */
+    public Path mergeJUnitXmlFiles(String directoryPath) {
+        return jUnitXmlMergerService.mergeJUnitXmlFiles(directoryPath);
     }
 }

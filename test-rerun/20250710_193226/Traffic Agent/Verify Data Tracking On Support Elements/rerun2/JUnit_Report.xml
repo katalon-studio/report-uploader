@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Verify Data Tracking On Support Elements" time="49.804" tests="1" failures="1" errors="0">
+   <testsuite name="Verify Data Tracking On Support Elements" tests="1" failures="1" errors="0" time="49.804" skipped="0" timestamp="2025-07-10T12:37:48.853Z" hostname="viet.dnguyen - localhost" id="Test Suites/Traffic Agent/Verify Data Tracking On Support Elements">
+      <properties>
+         <property name="deviceName" value=""/>
+         <property name="devicePlatform"/>
+         <property name="logFolder" value="/Users/viet.dnguyen/katalon/kqe-truetest-automation/Reports/20250710_193226/Traffic Agent/Verify Data Tracking On Support Elements/20250710_193746"/>
+         <property name="logFiles" value="/Users/viet.dnguyen/katalon/kqe-truetest-automation/Reports/20250710_193226/Traffic Agent/Verify Data Tracking On Support Elements/20250710_193746/execution0.log, /Users/viet.dnguyen/katalon/kqe-truetest-automation/Reports/20250710_193226/Traffic Agent/Verify Data Tracking On Support Elements/20250710_193746/console0.log"/>
+         <property name="attachments" value=""/>
+         <property name="userFullName" value="Viet Nguyen"/>
+         <property name="hostName" value="viet.dnguyen - localhost"/>
+         <property name="hostAddress" value="127.0.0.1"/>
+         <property name="projectName" value="kqe-truetest-automation"/>
+         <property name="os" value="Mac OS X 64bit"/>
+         <property name="katalonVersion" value="10.2.3.0"/>
+      </properties>
+      <testcase name="Test Cases/Traffic Agent/TC009 - Verify data tracking on element Input in Form (Input and Press Tab)" time="49.648" classname="Test Cases/Traffic Agent/TC009 - Verify data tracking on element Input in Form (Input and Press Tab)" status="FAILED">
+         <system-out><![CDATA[10-07-2025T19:37:49 - [TEST_CASE][PASSED] - Test Cases/Traffic Agent/TC009 - Verify data tracking on element Input in Form (Input and Press Tab): Test Cases/Traffic Agent/TC009 - Verify data tracking on element Input in Form (Input and Press Tab)
+
+10-07-2025T19:37:49 - [TEST_STEP][PASSED] - reportDir = getReportFolder(): null
+
+10-07-2025T19:37:49 - [TEST_STEP][PASSED] - reportDir = reportDir.replaceFirst("/Reports/", "/target/"): null
+
+10-07-2025T19:37:49 - [TEST_STEP][PASSED] - extensionDir = ConfigExtension.getExtensionFromSource(AGENT_EXTENSION_DIR, reportDir): null
+
+10-07-2025T19:37:49 - [TEST_STEP][PASSED] - ConfigExtension.setConfig(extensionDir, CLIENT_CODE, ENVIRONMENT_PREFIX, TRUETEST_HOSTS): null
+
+10-07-2025T19:37:49 - [TEST_STEP][PASSED] - playwrightManager = new com.katalon.automation.playwright.PlaywrightManager(): null
+
+10-07-2025T19:37:52 - [TEST_STEP][PASSED] - networkMonitor = new com.katalon.automation.playwright.NetworkTrafficMonitor(): null
+
+10-07-2025T19:37:52 - [TEST_STEP][PASSED] - playwrightManager.launchBrowserWithPersistentContext(false, extensionDir, true, reportDir): null
+
+10-07-2025T19:37:52 - [TEST_STEP][PASSED] - playwrightManager.newPage(): null
+
+10-07-2025T19:37:52 - [TEST_STEP][PASSED] - playwrightManager.startNetworkListener(networkMonitor.&captureRequest, networkMonitor.&captureResponse): null
+
+10-07-2025T19:37:52 - [TEST_STEP][PASSED] - playwrightManager.navigateTo("https://base-component.aut.katalon.com/input/form-inputs"): null
+
+10-07-2025T19:37:55 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:37:57 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Email"))): null
+
+10-07-2025T19:37:59 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Email")), "hello@katalon.com"): null
+
+10-07-2025T19:38:00 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:38:02 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/US Social Security Number")), "123-45-6789"): null
+
+10-07-2025T19:38:03 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:38:05 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Phone Number")), "+1 2013692667"): null
+
+10-07-2025T19:38:06 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:38:08 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Zip Code")), "92704"): null
+
+10-07-2025T19:38:09 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:38:11 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/LinkedIn Profile URL")), "https://www.linkedin.com/in/katalon"): null
+
+10-07-2025T19:38:12 - [TEST_STEP][PASSED] - findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Select Gender"))).selectOption("Male"): null
+
+10-07-2025T19:38:14 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:38:15 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/IPv4 Address")), "192.168.96.4"): null
+
+10-07-2025T19:38:17 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:38:19 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/IPv6 Address")), "5916:3bd9:65fb:296a:e893:4f9b:deeb:b484"): null
+
+10-07-2025T19:38:20 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Change Password Checkbox"))): null
+
+10-07-2025T19:38:22 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:38:23 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/New Password")), "Hello World@123#$%"): null
+
+10-07-2025T19:38:25 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:38:26 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Confirm New Password")), "Hello World@123#$%"): null
+
+10-07-2025T19:38:28 - [TEST_STEP][PASSED] - keyboard().press("Tab"): null
+
+10-07-2025T19:38:29 - [TEST_STEP][PASSED] - getPage().fill(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Credit Card Number")), "4916450019477019"): null
+
+10-07-2025T19:38:31 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Verify Human"))): null
+
+10-07-2025T19:38:32 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Submit Form"))): null
+
+10-07-2025T19:38:34 - [TEST_STEP][PASSED] - getPage().click(ObjectHelper.findSelector(findTestObject("Object Repository/Test AUT/Base Component/Form Input Type/Back To Home"))): null
+
+10-07-2025T19:38:36 - [TEST_STEP][PASSED] - getPage().waitForTimeout(2000): null
+
+10-07-2025T19:38:38 - [TEST_STEP][PASSED] - trackingTraffic = networkMonitor.getRequestsByUrlPattern("KA-"): null
+
+10-07-2025T19:38:38 - [TEST_STEP][PASSED] - actionRequests = TrackingData.getRequestsWithAction(trackingTraffic): null
+
+10-07-2025T19:38:38 - [TEST_STEP][PASSED] - timestamps = TrackingData.getTimestamps(actionRequests): null
+
+10-07-2025T19:38:38 - [TEST_STEP][PASSED] - actions = TrackingData.extractValuesWithSortByTimestamp(actionRequests, "$.action"): null
+
+10-07-2025T19:38:38 - [TEST_STEP][PASSED] - TrackingData.printRequests(actionRequests): null
+
+10-07-2025T19:38:38 - [TEST_STEP][PASSED] - assert timestamps.size() == toSet().size(): null
+
+10-07-2025T19:38:38 - [TEST_STEP][PASSED] - assert actions == ["view", "click", "input", "keydown", "input", "keydown", "input", "keydown", "input", "keydown", "input", "select", "keydown", "input", "keydown", "input", "click", "keydown", "input", "keydown", "input", "keydown", "input", "click", "click", "submit", "click", "view"]: null
+
+10-07-2025T19:38:38 - [TEST_STEP][PASSED] - playwrightManager.stopTracing($reportDir/trace.zip): null
+
+10-07-2025T19:38:38 - [TEST_STEP][PASSED] - playwrightManager.close(): null]]></system-out>
+         <system-err><![CDATA[]]></system-err>
+      </testcase>
+      <system-out><![CDATA[10-07-2025T19:37:48 - [TEST_SUITE][PASSED] - Verify Data Tracking On Support Elements: null]]></system-out>
+      <system-err><![CDATA[]]></system-err>
+   </testsuite>
+</testsuites>
