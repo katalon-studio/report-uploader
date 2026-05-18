@@ -1,8 +1,11 @@
 package com.katalon.kit.report.uploader.helper;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.katalon.kit.report.uploader.model.ReportType;
+import com.katalon.kit.report.uploader.model.UploadBatchInfo;
 import com.katalon.kit.report.uploader.model.UploadInfo;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.http.HttpHeaders;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -107,10 +110,31 @@ public class KatalonAnalyticsConnector {
             uriBuilder.setParameter("pushToXray", String.valueOf(pushToXray));
 
             HttpPost httpPost = new HttpPost(uriBuilder.build());
-            httpHelper.sendRequest(httpPost, token, null, null, null, null, null);
+            HttpResponse httpResponse = httpHelper.sendRequest(httpPost, token, null, null, null, null, null);
+            logExecutionUrl(httpResponse);
         } catch (Exception e) {
             log.error("Cannot send data to server: {}", url, e);
             exceptionHelper.wrap(e);
+        }
+    }
+
+    private void logExecutionUrl(HttpResponse httpResponse) {
+        try {
+            if (httpResponse == null || httpResponse.getEntity() == null) {
+                return;
+            }
+
+            try (InputStream content = httpResponse.getEntity().getContent()) {
+                List<UploadBatchInfo> uploadBatches = objectMapper.readValue(content, new TypeReference<List<UploadBatchInfo>>() {
+                });
+                uploadBatches.stream()
+                        .map(UploadBatchInfo::getWebUrl)
+                        .filter(StringUtils::isNotBlank)
+                        .findFirst()
+                        .ifPresent(webUrl -> log.info("TestOps execution URL: {}", webUrl));
+            }
+        } catch (Exception e) {
+            log.debug("Cannot parse upload response for execution URL", e);
         }
     }
 
