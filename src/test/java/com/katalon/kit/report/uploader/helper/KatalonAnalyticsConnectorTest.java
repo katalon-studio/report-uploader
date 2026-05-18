@@ -19,6 +19,7 @@ import org.springframework.test.util.ReflectionTestUtils;
 import java.io.ByteArrayInputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
@@ -80,7 +81,7 @@ class KatalonAnalyticsConnectorTest {
         connector.uploadFileInfo(123L, "batch-1", "folder", "report.log", "uploads/report.log", true, "token", false);
 
         verify(httpHelper).sendRequest(any(), anyString(), isNull(), isNull(), isNull(), isNull(), isNull());
-        List<String> messages = logAppender.list.stream().map(ILoggingEvent::getFormattedMessage).toList();
+        List<String> messages = logAppender.list.stream().map(ILoggingEvent::getFormattedMessage).collect(Collectors.toList());
         assertTrue(messages.contains("TestOps execution URL: https://example.katalon.io/team/1/project/2/executions/3"));
     }
 
@@ -93,7 +94,7 @@ class KatalonAnalyticsConnectorTest {
 
         connector.uploadFileInfo(123L, "batch-1", "folder", "report.log", "uploads/report.log", true, "token", false);
 
-        List<String> messages = logAppender.list.stream().map(ILoggingEvent::getFormattedMessage).toList();
+        List<String> messages = logAppender.list.stream().map(ILoggingEvent::getFormattedMessage).collect(Collectors.toList());
         assertTrue(messages.stream().noneMatch(message -> message.contains("TestOps execution URL:")));
     }
 }
