@@ -8,7 +8,7 @@ RUN mvn -B -f pom.xml -s /usr/share/maven/ref/settings-docker.xml dependency:res
 COPY . .
 RUN mvn -B -s /usr/share/maven/ref/settings-docker.xml package -DskipTests
 
-FROM openjdk:8-jre-alpine
+FROM eclipse-temurin:8-jre
 
 ENV SERVER=''
 ENV EMAIL=''
