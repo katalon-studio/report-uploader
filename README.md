@@ -20,3 +20,7 @@ Katalon Report Uploader is a utility to upload reports to Katalon TestOps. At th
 ## Usage
 
 Please see [Katalon TestOps documentation](https://docs.katalon.com/katalon-analytics/docs/project-management-import-cli.html).
+
+## Internal documentation
+
+- [Build and release runbook](docs/runbooks/testops-report-uploader-build-and-release.md)
